@@ -2,5 +2,5 @@
 layout: default
 ---
 
-[home](./index.md).
+[Home](./index.md).  [Blog](./blog)  [Interests](./interests)
 
