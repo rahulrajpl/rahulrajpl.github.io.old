@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Rahul's Weblogs</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="css/jquery.min.js"></script>
+  <script src="css/popper.min.js"></script>
+  <script src="css/bootstrap.min.js"></script>
+  <script src="css/include.js"></script>
+<title>Welcome</title>
 </head>
 <body>
+    <div class="p-3 mb-2 bg-dark text-white">
+        <div class="container">
+        <h1>Rahul Raj</h1>
+            <p class="lead">Website under construction.</p>
+    </div>
+</div>
+
+<div class="row" >
+  <div class="col-sm-4" >
+      <div class="alert alert-secondary">
+      <img src="images/self.jpeg" width="50%"
+           class="rounded-circle mx-auto d-block img-thumbnail"
+           alt="photo of me">
+
+          <div class="alert alert-dark">
+              <h4><kbd>Bio</kbd></h4>
+              <h5>Hello World !</h5>
+
+          </div>
+
+      </div>
+  </div>
+  <div class="col-sm-8 ">
+
+
+
+
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#tab_1" data-toggle="tab">About me</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tab_2" data-toggle="tab">Interests</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tab_3" data-toggle="tab">Research</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tab_4" data-toggle="tab">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tab_5" data-toggle="tab">Social</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div w3-include-html="pages/about.html"  role="tabpanel" class="tab-pane fadein active" id="tab_1" ">
+                            <script>includeHTML();</script>
+                    </div>
+                    <div w3-include-html="pages/interest.html" role="tabpanel" class="tab-pane fade" id="tab_2">
+                        <p>
+                            <script>includeHTML();</script>
+                        </p>
+                    </div>
+                    <div w3-include-html="pages/res.html" role="tabpanel" class="tab-pane fade" id="tab_3">
+                        <p>
+                            <script>includeHTML();</script>
+                        </p>
+                    </div>
+                    <div w3-include-html="pages/pub.html" role="tabpanel" class="tab-pane fade" id="tab_4">
+                        <p>
+                            <script>includeHTML();</script>
+                        </p>
+                    </div>
+                    <div w3-include-html="pages/social.html" role="tabpanel" class="tab-pane fade" id="tab_5">
+                        <p>
+                            <script>includeHTML();</script>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+
+  </div>
+</div>
+
 
 </body>
 </html>
