@@ -1,0 +1,24 @@
+# jemdoc: menu{MENU}{index.html}
+= Welcome
+
+Welcome to my homepage.
+
+~~~
+{}{img_left}{self.jpeg }{alt text}{150px}{150px}{IMGLINKTARGET}
+== Rahul Raj\n
+MTech, Y18, \n
+[http://www.cse.iitk.ac.in/ Dept. of Computer Science and Engineering],\n
+[http://www.iitk.ac.in/ Indian Institute of Technology, Kanpur]
+~~~
+\n 
+\n 
+I am Rahul Raj (രാഹുൽ രാജ്)[https://en.wikipedia.org/wiki/Malayalam ?] (राहुल राज)[https://en.wikipedia.org/wiki/Hindi ?]. This personal website is resulted from a time pass activity. I do not commit to maintain it regularly and thus contents may go outdated. Please feel free to contact me through [contact.html email], if I'd be of some help. Find more info through links provided on left side.\n
+\n 
+\n
+\n 
+\n
+~~~
+Dislaimer: Except the textual/image data which are personal, credits to everything else you see in this website goes to [thanks.html respective owners].
+~~~
+
+
