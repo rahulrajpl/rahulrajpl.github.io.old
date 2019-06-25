@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Rahul's personal website build configuration file, created by
-# `ablog start` on Wed Jun 26 00:48:22 2019.
+# rahul's web log build configuration file, created by
+# `ablog start` on Wed Jun 26 01:53:01 2019.
 #
 # Note that not all possible configuration values are present in this file.
 # All configuration values have a default; values that are commented out
@@ -19,7 +19,7 @@ import alabaster
 #blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = u'Rahul\'s personal website Blog'
+blog_title = u'rahul\'s web log Blog'
 
 # Base URL for the website, required for generating feeds.
 # e.g. blog_baseurl = "http://example.com/"
@@ -180,7 +180,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Rahul\'s personal website'
+project = u'rahul\'s web log'
 copyright = u'2019, Rahul Raj'
 author = u'Rahul Raj'
 
@@ -248,11 +248,9 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'github_button': True,
+    'github_button': False,
 }
-github_pages = 'rahulrajpl'
-REPODIR = '../rahulrajpl.github.io'
-MESSAGE = 'Deploying from ablog'
+
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [alabaster.get_path()]
 
@@ -338,6 +336,6 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Rahulspersonalwebsitedoc'
+htmlhelp_basename = 'rahulsweblogdoc'
 
 
