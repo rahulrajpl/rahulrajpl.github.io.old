@@ -250,7 +250,7 @@ html_theme = 'alabaster'
 html_theme_options = {
     'github_button': True,
 }
-
+github_pages = 'rahulrajpl'
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [alabaster.get_path()]
 
