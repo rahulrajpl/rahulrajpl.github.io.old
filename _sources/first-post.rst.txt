@@ -1,5 +1,5 @@
 
-.. Rahul's personal website post example, created by `ablog start` on Jun 26, 2019.
+.. rahul's web log post example, created by `ablog start` on Jun 26, 2019.
 
 .. post:: Jun 26, 2019
    :tags: atag
