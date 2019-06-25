@@ -252,6 +252,7 @@ html_theme_options = {
 }
 github_pages = 'rahulrajpl'
 REPODIR = '../rahulrajpl.github.io'
+MESSAGE = 'Deploying from ablog'
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [alabaster.get_path()]
 
