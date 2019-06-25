@@ -1,10 +1,10 @@
 
-.. rahul's web log index file, created by `ablog start` on Wed Jun 26 01:53:01 2019.
+.. rblogs index file, created by `ablog start` on Wed Jun 26 02:10:29 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 Welcome to Rahul Raj's Blog!
-===========================================
+==================================
 
 Hello World! Find more about me here: :ref:`about`
 

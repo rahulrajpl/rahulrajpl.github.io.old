@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# rahul's web log build configuration file, created by
-# `ablog start` on Wed Jun 26 01:53:01 2019.
+# rblogs build configuration file, created by
+# `ablog start` on Wed Jun 26 02:10:29 2019.
 #
 # Note that not all possible configuration values are present in this file.
 # All configuration values have a default; values that are commented out
@@ -19,7 +19,7 @@ import alabaster
 #blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = u'rahul\'s web log Blog'
+blog_title = u'rblogs Blog'
 
 # Base URL for the website, required for generating feeds.
 # e.g. blog_baseurl = "http://example.com/"
@@ -180,7 +180,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'rahul\'s web log'
+project = u'rblogs'
 copyright = u'2019, Rahul Raj'
 author = u'Rahul Raj'
 
@@ -336,6 +336,6 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'rahulsweblogdoc'
+htmlhelp_basename = 'rblogsdoc'
 
 
