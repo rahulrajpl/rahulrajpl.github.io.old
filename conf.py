@@ -251,6 +251,7 @@ html_theme_options = {
     'github_button': True,
 }
 github_pages = 'rahulrajpl'
+REPODIR = '../rahulrajpl.github.io'
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [alabaster.get_path()]
 
