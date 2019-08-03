@@ -1,12 +1,12 @@
 # jemdoc: menu{MENU}{index.html}
 = Welcome
 
-Welcome to my homepage.
+
 
 ~~~
 {}{img_left}{self.jpeg }{alt text}{150px}{150px}{IMGLINKTARGET}
 == Rahul Raj\n
-MTech, Y18, \n
+Advisor: [https://www.cse.iitk.ac.in/users/tvp/ Prof. TV Prabhakar], \n
 [http://www.cse.iitk.ac.in/ Dept. of Computer Science and Engineering],\n
 [http://www.iitk.ac.in/ Indian Institute of Technology, Kanpur]
 ~~~
@@ -18,7 +18,7 @@ I am Rahul Raj (രാഹുൽ രാജ്)[https://en.wikipedia.org/wiki/Mala
 \n 
 \n
 ~~~
-Dislaimer: Except the textual/image data which are personal, credits to everything else you see in this website goes to [thanks.html respective owners].
+References: Credits to [thanks.html respective owners].
 ~~~
 
 
