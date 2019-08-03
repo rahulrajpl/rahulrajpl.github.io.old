@@ -3,21 +3,19 @@
 
 ~~~
 {}{table}{Check}
-Ser | Title | Description | Contributors | Link ||
+Ser | Title | Contributors | Link ||
 1 | Empherical Analysis of Zero Shot Learning |
-We intend to undertake an analysis and comparative study of some of the existing zero shot learning algorithms with different image datasets. Various algorithms under consideration are DAP (Direct Attribute Prediction), CONSE (Convex Combination of semantic embedding), SSE(Semantic Similarity embedding), DEVISE (Deep Visual Semantic Embedding), SJE (Structured Joint Embedding), LATEM (Latent embedding), ESZSL (Embarrassingly simple approach to zero shot learning), ALE (Attribute Label embedding), SYNC (Synthesized Classifier for ZSL).
-|
-Appu B \n
-Harikrishnan Balagopal \n
-Jatin Aswal \n
-Karan Basson \n
-Rahul Raj \n
-Somesh Rajoriya \n |
+
+Appu B,
+Harikrishnan Balagopal,
+Jatin Aswal,
+Karan Basson,
+Rahul Raj,
+Somesh Rajoriya |
  Report - [report.pdf pdf] ||
 
 2 | Analysing Political bias on Indian News Media |
-    Political bias on print\/ online media is undertaken through various Data mining techniques such as sentiment analysis, on dataset generated through scrapping the political news from the online portals/ archives of 'THE HINDU', 'NDTV', 'India Today', 'Tribune'.
-    |
+    
     Appu B \n
     Pranjal Jain \n
     Karan Basson \n
@@ -28,7 +26,7 @@ Somesh Rajoriya \n |
     Sourcecode - [https://github.com/rahulrajpl/Media-Political-Bias link]
    ||
 3 | RemindMe - Android App for Reminder services |
-    Most of the reminder applications available today in mobile phones are generic in style which is time\/date based for alerting about the set reminder or task. If the reminder is ON, the Listner service in the device continuously monitor the date/time setting of the phone with the saved time and date, and the user will be alerted if it is a match. In most of the cases, user would want some more additional features than just reminder service. In this project, we intend to design an android application which provides a feature for saving location in the reminder. Location service is not available with any of the reminder service application currently available in the Android Play Store |
+    
     Karan Basson \n
     Rahul Raj
     |
@@ -36,8 +34,7 @@ Somesh Rajoriya \n |
     Sourcecode - [https://github.com/rahulrajpl/ReminderApp link]
     ||
 4 | Employee Feedback System on Blockchain |
-Feedback and effective organizational communication is the key factor which is linked with overall employee satisfaction, employee retention, healthier business performance, etc. Problems associated with traditional systems are prone to bias, forging and censorship for illicit intent which can lead to attrition of high potential employees. A blockchain based solution as proposed here can be an effective way which can ensure, transparency, immutability at the same time ensure privacy and security. High-performers always understand that there is constant room for improving work efficiency and they thrive when given the opportunity to be heard and valued without fear and reluctance. Therefore, we feel that this a problem that needs to be addressed.
-|
+
 Abhishesk Valsan \n
 Appu B \n
 Rahul Raj \n
