@@ -2,45 +2,30 @@
 = Projects
 
 ~~~
-{}{table}{Check}
-Ser | Title | Contributors | Link ||
-1 | Empherical Analysis of Zero Shot Learning |
+{}{table}{}
+Ser | Title | Link ||
+1 | 
+Empirical Analysis of Zero Shot Learning |
+Report - [docs/zsl_report_ppt.pdf pdf] 
+||
 
-Appu B,
-Harikrishnan Balagopal,
-Jatin Aswal,
-Karan Basson,
-Rahul Raj,
-Somesh Rajoriya |
- Report - [report.pdf pdf] ||
+2 | 
+Analysing Partisan bias on Indian News Media |
+Report - [docs/bias.pdf pdf], 
+Sourcecode - [https://github.com/rahulrajpl/Media-Political-Bias link]
+||
 
-2 | Analysing Political bias on Indian News Media |
-    
-    Appu B \n
-    Pranjal Jain \n
-    Karan Basson \n
-    Rahul Raj \n
-    |
-    Report - [bias.pdf pdf] \n
+3 | 
+RemindMe - Android App for Reminder services |
+Report - [docs/mob.pdf pdf], Sourcecode - [https://github.com/rahulrajpl/ReminderApp link], 
+Demo Video - [https://youtu.be/ge-9HVIbzHA view]
+||
 
-    Sourcecode - [https://github.com/rahulrajpl/Media-Political-Bias link]
-   ||
-3 | RemindMe - Android App for Reminder services |
-    
-    Karan Basson \n
-    Rahul Raj
-    |
-    Report - [mob.pdf pdf] \n
-    Sourcecode - [https://github.com/rahulrajpl/ReminderApp link]
-    ||
-4 | Employee Feedback System on Blockchain |
-
-Abhishesk Valsan \n
-Appu B \n
-Rahul Raj \n
-Karan Basson
-|
-Sourcecode - [https://github.com/ABHISHEKVALSAN/EtherFeeds/tree/master/etherfeeds view] \n
+4 | 
+Employee Feedback System on Blockchain |
+Report [ to_be_updated], 
+Sourcecode - [https://github.com/ABHISHEKVALSAN/EtherFeeds/tree/master/etherfeeds view], 
 Demo video - [https://www.youtube.com/watch?v=-9j-L9PMPzo&t=125s view]
 ||
+
 ~~~
