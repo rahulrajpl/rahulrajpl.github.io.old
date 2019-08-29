@@ -370,9 +370,9 @@ img {
 }
 
 table.imgtable, table.imgtable td {
-	margin-left: 10%; 
+	margin-left: 0%; 
 	border: none;
-	text-align: left;
+	text-align: center;
 	align-content: center;
 	align-self: center;
 	align-items: center;
