@@ -1,7 +1,6 @@
 ## Personal Website theme
--------------------------
-![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Frahulrajpl%2Frahulrajpl.github.io)
 
+![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Frahulrajpl%2Frahulrajpl.github.io)
 ![MIT Licensed](https://img.shields.io/github/license/rahulrajpl/rahulrajpl.github.io?style=social)
 
 This project is forked and customized on top of:-
