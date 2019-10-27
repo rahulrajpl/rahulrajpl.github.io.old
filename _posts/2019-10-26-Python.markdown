@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Python packages I keep a watch on"
+categories: [python]
+---
+
+I keep a close watch on or actively use following python packages:- 
+
+ 
+* Numpy
+* Pandas
+* tensorflow
+* keras
+* sklearn
+* scipy
+* matplotlib
+
+All packages are being managed using `pip`
+
+This post is not final and will be incrementally updated.
+
+Sample highligting of code snippet show below.
+
+{% highlight python %}
+
+def function():
+    pass
+
+# This is a sample python file.
+{% endhighlight %}
