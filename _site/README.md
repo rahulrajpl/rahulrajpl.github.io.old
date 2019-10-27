@@ -1,10 +1,10 @@
-## My Stack Problems
+## Personal Website theme
 
-> This project forked and has been modified from [A simple grey theme for Jekyll](https://github.com/liamsymonds/simplygrey-jekyll),
-> and the search posts using [Super Search](https://github.com/chinchang/super-search)
+This project is forked and customized on top of:-
 
-### Demo
 * [https://agusmakmun.github.io](https://agusmakmun.github.io)
+* [A simple grey theme for Jekyll](https://github.com/liamsymonds/simplygrey-jekyll)
+* [Super Search](https://github.com/chinchang/super-search)
 
 #### Features
 
@@ -21,9 +21,6 @@
 * Google analytics
 * HTML Minify _(Compress HTML)_ using [Jekyll Compress HTML](https://github.com/penibelst/jekyll-compress-html)
 
-#### Screenshot
-
-![Screenshot Post Page](https://raw.githubusercontent.com/agusmakmun/agusmakmun.github.io/master/static/img/screenshot-post-page.png  "Screenshot Post Page")
 
 ### Install & Configuration
 
@@ -40,9 +37,9 @@ All categories saved inside path of `category/`, you can see the existed categor
 
 **b. Add new Posts**
 
-* All posts bassed on markdown syntax _(please googling)_. allowed extensions is `*.markdown` or `*.md`.
-* This files can found at the path of `_posts/`.
-* and the name of files are following `<date:%Y-%m-%d>-<slug>.<extension>`, for example:
+* All posts bassed on markdown syntax. Allowed extensions is `*.markdown` or `*.md`.
+* This files can found at `_posts/`.
+* and file name format is `<date:%Y-%m-%d>-<slug>.<extension>`, for example:
 
 ```
 2013-09-23-welcome-to-jekyll.md
@@ -52,7 +49,7 @@ All categories saved inside path of `category/`, you can see the existed categor
 2013-09-23-welcome-to-jekyll.markdown
 ```
 
-Inside the file of it,
+Content of the file be like,
 
 ```
 ---
@@ -70,11 +67,19 @@ image: Broadcast_Mail.png             # (custom) image only for meta `property="
 
 #### Installing in your local
 
+Follow instruction at official jekyll page to get the local machine for ruby development. Then run the following commands in the cloned directory
+
 ```
-bundle install
-jekyll serve
+bundle
+bundle exec jekyll build
+bundle exec jekyll serve
 ```
 
 ### Contributing
 
-Feel free to [open a bug](https://github.com/agusmakmun/agusmakmun.github.io/issues) or [contribute to code](https://github.com/agusmakmun/agusmakmun.github.io/pulls)!
+Feel free to [open a bug](https://github.com/rahulrajpl/rahulrajpl.github.io/issues) or [contribute to code](https://github.com/rahulrajpl/rahulrajpl.github.io/pulls)!
+
+### Credits
+
+* Original Theme: [Agus Makmun](https://agusmakmun.github.io)
+* Customized by: [Rahul Raj](http://randomwalk.in)
