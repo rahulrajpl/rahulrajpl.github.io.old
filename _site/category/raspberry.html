@@ -10,7 +10,7 @@
     <meta name="description" content="Raspberry Pi" />
     <meta name="keywords" content="Raspberry Pi, ~/personal/web/logs, raspberry" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
-    <meta content="1749788565247320" property="fb:app_id">
+    <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/personal/web/logs" property="og:site_name">
 
     
@@ -21,7 +21,7 @@
     
 
     
-      <meta content="My Personal random walks in life" property="og:description">
+      <meta content="Personal website, blogs and other updates" property="og:description">
     
 
     
@@ -53,7 +53,7 @@
     
 
     
-      <meta name="twitter:description" content="My Personal random walks in life">
+      <meta name="twitter:description" content="Personal website, blogs and other updates">
     
 
     
@@ -81,31 +81,34 @@
           <h1 class="author-name"><a href="/">Rahul Raj</a></h1>
           
             <div class="profile-about">
-              I'm a strange loop, I take randomwalks.
+              I'm a strange loop.
+              
             </div>
           
           <div class="social">
             <ul>
               
-                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/0192837465raj" target="_blank"><i class="fa fa-facebook"></i></a></li>
               
-                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://twitter.com/rahulrajpl" target="_blank"><i class="fa fa-twitter"></i></a></li>
               
-                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/rahul-r-909409184/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
               
-                <li><a href="#" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+                <li><a href="https://askubuntu.com/users/1004462/rahul-raj" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
               
-                <li><a href="https://github.com/agusmakmun" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/rahulrajpl" target="_blank"><i class="fa fa-github"></i></a></li>
               
             </ul>
           </div>
+          
           <div class="search" id="js-search">
-            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
-            <ul class="search__results" id="js-search__results"></ul>
+              <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+              <ul class="search__results" id="js-search__results"></ul>
           </div>
+          
           <hr />
           <ul class="sidebar-nav">
-            <strong>Navigation</strong>
+              <strong>Navigation</strong>
             <li><a href="/">Home</a></li>
             
               <li><a class="about" href="/about/">About Me</a></li>
@@ -115,7 +118,16 @@
               <li><a class="about" href="/feed.xml">XML Feed</a></li>
             
           </ul>
-        </div>
+          <hr />
+
+          <strong>Contact me</strong>
+          <p id="email">Email id-rahulr@iitk.ac.in<a href="#"
+            onclick="emailScramble.initAnimatedBubbleSort();return false;">-unscramble</a></p>
+          
+          
+
+
+          </div>
         <!-- end /.fixed-condition -->
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
@@ -140,7 +152,7 @@
   
 </div>
 
-        <footer>
+        <footer style="text-align: right;">
           &copy; Rahul Raj
           
             - <a href="https://github.com/rahulrajpl">https://github.com/rahulrajpl</a> - Powered by Jekyll.
@@ -163,6 +175,14 @@
     <script src="/static/js/super-search.js"></script>
     <script src="/static/js/thickbox-compressed.js"></script>
     <script src="/static/js/projects.js"></script>
+    <!-- Email unscramble script -->
+    <!-- Script Author: http://jeffdonahue.com/ -->
+    <script src="/static/js/scramble.js"></script>
+    <script>
+        emailScramble = new scrambledString(document.getElementById('email'),
+            'emailScramble', 'a.k.r@aihnitulirc',
+            [13, 15, 11, 12, 1, 7, 2, 9, 3, 17, 8, 10, 4, 5, 16, 6, 14]);
+    </script>
   </body>
 </html>
 

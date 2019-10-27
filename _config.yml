@@ -1,8 +1,8 @@
 title: ~/personal/web/logs
-description: My Personal random walks in life
+description: Personal website, blogs and other updates
 author: Rahul Raj
 github: https://github.com/rahulrajpl
-about: I'm a strange loop, I take randomwalks.
+about: I'm a strange loop.
 disqus_shortname: randomwalk-in
 google_analytics: UA-146669700-1
 
@@ -16,19 +16,19 @@ collections:
 
 social:
     - icon: fa-facebook
-      link: "#"
+      link: "https://www.facebook.com/0192837465raj"
     - icon: fa-twitter
-      link: "#"
+      link: "https://twitter.com/rahulrajpl"
     - icon: fa-linkedin
-      link: "#"
+      link: "https://www.linkedin.com/in/rahul-r-909409184/"
     - icon: fa-stack-exchange
-      link: "#"
+      link: "https://askubuntu.com/users/1004462/rahul-raj"
     - icon: fa-github
-      link: "https://github.com/agusmakmun"
+      link: "https://github.com/rahulrajpl"
 
 share:
   twitter_username: rahulrajpl
-  fb_appid: 1749788565247320
+  fb_appid: 0192837465raj
 
 urls:     
     - text: About Me
@@ -38,7 +38,7 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "https://agusmakmun.github.io"
+url: "https://rahulrajpl.github.io"
 baseurl: ""
 paginate: 20
 per_page: 20

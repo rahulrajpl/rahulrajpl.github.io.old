@@ -118,6 +118,7 @@ layout: compress
           {% if site.about %}
             <div class="profile-about">
               {{ site.about }}
+              
             </div>
           {% endif %}
           <div class="social">
@@ -127,24 +128,35 @@ layout: compress
               {% endfor %}
             </ul>
           </div>
+          
           <div class="search" id="js-search">
-            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
-            <ul class="search__results" id="js-search__results"></ul>
+              <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+              <ul class="search__results" id="js-search__results"></ul>
           </div>
+          
           <hr />
           <ul class="sidebar-nav">
-            <strong>Navigation</strong>
+              <strong>Navigation</strong>
             <li><a href="/">Home</a></li>
             {% for i in site.urls %}
               <li><a class="about" href="{{ i.url }}">{{ i.text }}</a></li>
             {% endfor %}
           </ul>
-        </div>
+          <hr />
+
+          <strong>Contact me</strong>
+          <p id="email">Email id-rahulr@iitk.ac.in<a href="#"
+            onclick="emailScramble.initAnimatedBubbleSort();return false;">-unscramble</a></p>
+          
+          
+
+
+          </div>
         <!-- end /.fixed-condition -->
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         {{ content }}
-        <footer>
+        <footer style="text-align: right;">
           &copy; {{ site.author }}
           {% if site.github %}
             - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
@@ -167,5 +179,13 @@ layout: compress
     <script src="/static/js/super-search.js"></script>
     <script src="/static/js/thickbox-compressed.js"></script>
     <script src="/static/js/projects.js"></script>
+    <!-- Email unscramble script -->
+    <!-- Script Author: http://jeffdonahue.com/ -->
+    <script src="/static/js/scramble.js"></script>
+    <script>
+        emailScramble = new scrambledString(document.getElementById('email'),
+            'emailScramble', 'a.k.r@aihnitulirc',
+            [13, 15, 11, 12, 1, 7, 2, 9, 3, 17, 8, 10, 4, 5, 16, 6, 14]);
+    </script>
   </body>
 </html>

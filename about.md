@@ -4,6 +4,19 @@ title: About
 permalink: /about/
 ---
 
-I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
+Currently, I'm a graduate student in Computer Science and Engineering at IIT Kanpur.
 
-email: agus[at]python.web.id
+**Reach me here**
+
+Room No: RM302,<br>
+[Dept. of Computer Science and Engineering](http://www.cse.iitk.ac.in/),<br>
+[Indian Institute of Technology, Kanpur](http://www.iitk.ac.in/)<br>
+Kalyanpur, Kanpur, UP - 208016
+
+**Advisor**
+
+[Dr. Prabhakar T.V](https://www.cse.iitk.ac.in/users/tvp/)
+
+
+
+    
