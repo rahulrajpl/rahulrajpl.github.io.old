@@ -20,12 +20,12 @@ All packages are being managed using `pip`
 
 This post is not final and will be incrementally updated.
 
-Sample highligting of code snippet show below.
+Sample highligting of code.
 
 {% highlight python %}
 
 def function():
     pass
 
-# This is a sample python file.
+# This is a sample python code.
 {% endhighlight %}
