@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Python - ~/personal/web/logs</title>
+    <title>Install python3.6+ for local user on remote machine without root access - ~/personal/web/logs</title>
     <meta name="author" content="Rahul Raj" />
-    <meta name="description" content="Python" />
-    <meta name="keywords" content="Python, ~/personal/web/logs, python" />
+    <meta name="description" content="Install python3.6+ for local user on remote machine without root access" />
+    <meta name="keywords" content="Install python3.6+ for local user on remote machine without root access, ~/personal/web/logs, python" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/personal/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Python" property="og:title">
+      <meta content="Install python3.6+ for local user on remote machine without root access" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,9 +25,12 @@
     
 
     
-      <meta content="http://localhost:4000/category/python" property="og:url">
+      <meta content="http://localhost:4000/python/2019/10/27/Install-Python-copy.html" property="og:url">
     
 
+    
+      <meta content="2019-10-27T00:00:00+05:30" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
     
 
     
@@ -39,17 +42,19 @@
     
 
     
+      
+    
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@rahulrajpl">
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Python">
+      <meta name="twitter:title" content="Install python3.6+ for local user on remote machine without root access">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/category/python">
+      <meta name="twitter:url" content="http://localhost:4000/python/2019/10/27/Install-Python-copy.html">
     
 
     
@@ -132,51 +137,142 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Articles by category: python</h1>
+  <h1 class="post-title">Install python3.6+ for local user on remote machine without root access</h1>
+  
 </header>
 
-<div class="post-content">
-  <hr />
+<span class="time">27 Oct 2019</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/python">python</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><p>I have recently encountered an issue where I have access to remote server, but the python version installed on it was 3.4. My application required 3.6+ and I do not have root access to install it using apt. So here are the steps I have followed: -</p>
+
+<h3 id="installing-python-36-works-with-any-version-per-say">Installing Python 3.6 (works with any version per say)</h3>
+
+<ol>
+  <li>
+    <p>Get the official download link from python.org website(Example. https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz)</p>
+  </li>
+  <li>
+    <p>Download the python source release and get the folder readied for installation from source.</p>
+  </li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz</span>
+<span class="s">$ tar zxfv Python-3.6.9.tgz</span>
+<span class="s">$ find ~/inflated_folder/python -type d | xargs chmod </span><span class="m">0755</span>
+<span class="s">$ cd Python-3.6.9</span></code></pre></figure>
+
+<ol>
+  <li>Install from source</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ ./configure --prefix=~/inflated_folder/python</span>
+<span class="s">$ make</span>
+<span class="s">$ make install</span></code></pre></figure>
+
+<ol>
+  <li>Export the path variable</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ nano ~/.bashrc</span>
+<span class="s">$ export PATH=~/inflated_folder/python/Python-3.6.9/:$PATH</span>
+<span class="s">$ source ~/.bashrc</span></code></pre></figure>
+
+<p>Now you have python3.6 installed for logged in user andcan be invoked now using command <code class="language-plaintext highlighter-rouge">python</code></p>
+
+<h3 id="installing-py-packages">Installing py packages.</h3>
+
+<p>The easiest way that I have followed is</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ python -m pip install &lt;package-name&gt; --user</span></code></pre></figure>
+
+</div>
+  
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rahulrajpl">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/python/2019/10/27/Install-Python-copy.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=0192837465raj";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
   
     
-    
-      
-        <button class="btn btn-sm btn-default active">python</button>
-      
-    
-  
-
-  <hr />
-  
-    
-      
-      
-          <h4>2019</h4>
-          <div class="list-group">
-      
-
-      
-        <ul class="posts">
-          <li><a href="/python/2019/10/27/Install-Python-copy.html">Install python3.6+ for local user on remote machine without root access</a> &raquo; <i><span>27 Oct 2019</span></i></li>
-        </ul>
-      
-    
-      
-      
-
       
         
-        
-        
-      
-        <ul class="posts">
-          <li><a href="/python/2019/10/26/Python.html">Python packages I keep a watch on</a> &raquo; <i><span>26 Oct 2019</span></i></li>
-        </ul>
-      
-        </div>
+          
       
     
   
+    
+      
+        
+          
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2019/10/26/Python.html">Python packages I keep a watch on</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+    
+  
+  
+  </ul>
+</div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/python/2019/10/26/Python.html">&laquo; Python packages I keep a watch on</a>
+  
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "randomwalk-in";
+    var disqus_identifier = "http://localhost:4000_Install python3.6+ for local user on remote machine without root access";
+    var disqus_title = "Install python3.6+ for local user on remote machine without root access";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
 </div>
 
         <footer style="text-align: right;">

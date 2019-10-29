@@ -5,9 +5,63 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Oct 2019 19:12:45 +0530</pubDate>
-    <lastBuildDate>Sun, 27 Oct 2019 19:12:45 +0530</lastBuildDate>
+    <pubDate>Mon, 28 Oct 2019 19:07:42 +0530</pubDate>
+    <lastBuildDate>Mon, 28 Oct 2019 19:07:42 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Install python3.6+ for local user on remote machine without root access</title>
+        <description>&lt;p&gt;I have recently encountered an issue where I have access to remote server, but the python version installed on it was 3.4. My application required 3.6+ and I do not have root access to install it using apt. So here are the steps I have followed: -&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-python-36-works-with-any-version-per-say&quot;&gt;Installing Python 3.6 (works with any version per say)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get the official download link from python.org website(Example. https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the python source release and get the folder readied for installation from source.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ tar zxfv Python-3.6.9.tgz&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ find ~/inflated_folder/python -type d | xargs chmod &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0755&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ cd Python-3.6.9&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install from source&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ ./configure --prefix=~/inflated_folder/python&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ make&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Export the path variable&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ nano ~/.bashrc&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ export PATH=~/inflated_folder/python/Python-3.6.9/:$PATH&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ source ~/.bashrc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you have python3.6 installed for logged in user andcan be invoked now using command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-py-packages&quot;&gt;Installing py packages.&lt;/h3&gt;
+
+&lt;p&gt;The easiest way that I have followed is&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ python -m pip install &amp;lt;package-name&amp;gt; --user&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Sun, 27 Oct 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/python/2019/10/27/Install-Python-copy.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2019/10/27/Install-Python-copy.html</guid>
+        
+        
+        <category>python</category>
+        
+      </item>
     
       <item>
         <title>Python packages I keep a watch on</title>
@@ -27,12 +81,12 @@
 
 &lt;p&gt;This post is not final and will be incrementally updated.&lt;/p&gt;
 
-&lt;p&gt;Sample highligting of code snippet show below.&lt;/p&gt;
+&lt;p&gt;Sample highligting of code.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;# This is a sample python file.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;c1&quot;&gt;# This is a sample python code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Sat, 26 Oct 2019 00:00:00 +0530</pubDate>

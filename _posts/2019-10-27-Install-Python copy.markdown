@@ -16,13 +16,13 @@ I have recently encountered an issue where I have access to remote server, but t
 {% highlight YAML %}
 $ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
 $ tar zxfv Python-3.6.9.tgz
-$ find ~/inflated_folder/python -type d | xargs chmod 0755
+$ find ~/inflated_location/Python-3.6.9/Python -type d | xargs chmod 0755
 $ cd Python-3.6.9
 {% endhighlight %}
 
 3. Install from source
 {% highlight YAML %}
-$ ./configure --prefix=~/inflated_folder/python
+$ ./configure --prefix=~/inflated_location/Python-3.6.9/Python
 $ make
 $ make install
 {% endhighlight %}
@@ -34,7 +34,7 @@ $ export PATH=~/inflated_folder/python/Python-3.6.9/:$PATH
 $ source ~/.bashrc
 {% endhighlight %}
 
-Now you have python3.6 installed for logged in user andcan be invoked now using command `python`
+Now you have python3.6 installed for logged in user and can be invoked now using command `python`
 
 ### Installing py packages.
 
