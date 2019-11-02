@@ -15,6 +15,7 @@ I keep a close watch on or actively use following python packages:-
 * sklearn
 * scipy
 * matplotlib
+* plotly_express [Ref](https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&utm_medium=social_link&utm_source=missinglettr-twitter)
 
 All packages are being managed using `pip`
 
