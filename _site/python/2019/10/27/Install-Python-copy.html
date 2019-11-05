@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
     <title>Install python3.6+ for local user on remote machine without root access - ~/personal/web/logs</title>
-    <meta name="author" content="Rahul Raj" />
+    <meta name="author" content="RandomWalk" />
     <meta name="description" content="Install python3.6+ for local user on remote machine without root access" />
     <meta name="keywords" content="Install python3.6+ for local user on remote machine without root access, ~/personal/web/logs, python" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
@@ -83,7 +83,7 @@
     <div class="container">
       <div class="col-sm-3">
         <div class="fixed-condition">
-          <h1 class="author-name"><a href="/">Rahul Raj</a></h1>
+          <h1 class="author-name"><a href="/">RandomWalk</a></h1>
           
             <div class="profile-about">
               Hello, there!
@@ -164,14 +164,14 @@
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz</span>
 <span class="s">$ tar zxfv Python-3.6.9.tgz</span>
-<span class="s">$ find ~/inflated_folder/python -type d | xargs chmod </span><span class="m">0755</span>
+<span class="s">$ find ~/inflated_location/Python-3.6.9/Python -type d | xargs chmod </span><span class="m">0755</span>
 <span class="s">$ cd Python-3.6.9</span></code></pre></figure>
 
 <ol>
   <li>Install from source</li>
 </ol>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ ./configure --prefix=~/inflated_folder/python</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">$ ./configure --prefix=~/inflated_location/Python-3.6.9/Python</span>
 <span class="s">$ make</span>
 <span class="s">$ make install</span></code></pre></figure>
 
@@ -183,7 +183,7 @@
 <span class="s">$ export PATH=~/inflated_folder/python/Python-3.6.9/:$PATH</span>
 <span class="s">$ source ~/.bashrc</span></code></pre></figure>
 
-<p>Now you have python3.6 installed for logged in user andcan be invoked now using command <code class="language-plaintext highlighter-rouge">python</code></p>
+<p>Now you have python3.6 installed for logged in user and can be invoked now using command <code class="language-plaintext highlighter-rouge">python</code></p>
 
 <h3 id="installing-py-packages">Installing py packages.</h3>
 
@@ -276,7 +276,7 @@
 </div>
 
         <footer style="text-align: right;">
-          &copy; Rahul Raj
+          &copy; RandomWalk
           
             - <a href="https://github.com/rahulrajpl">https://github.com/rahulrajpl</a> - Powered by Jekyll.
           

@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Oct 2019 19:07:42 +0530</pubDate>
-    <lastBuildDate>Mon, 28 Oct 2019 19:07:42 +0530</lastBuildDate>
+    <pubDate>Tue, 05 Nov 2019 20:07:06 +0530</pubDate>
+    <lastBuildDate>Tue, 05 Nov 2019 20:07:06 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -26,14 +26,14 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;$ tar zxfv Python-3.6.9.tgz&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;$ find ~/inflated_folder/python -type d | xargs chmod &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0755&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;$ find ~/inflated_location/Python-3.6.9/Python -type d | xargs chmod &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0755&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;$ cd Python-3.6.9&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Install from source&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ ./configure --prefix=~/inflated_folder/python&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ ./configure --prefix=~/inflated_location/Python-3.6.9/Python&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;$ make&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;$ make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -45,7 +45,7 @@
 &lt;span class=&quot;s&quot;&gt;$ export PATH=~/inflated_folder/python/Python-3.6.9/:$PATH&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;$ source ~/.bashrc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now you have python3.6 installed for logged in user andcan be invoked now using command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now you have python3.6 installed for logged in user and can be invoked now using command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;installing-py-packages&quot;&gt;Installing py packages.&lt;/h3&gt;
 
@@ -75,6 +75,7 @@
   &lt;li&gt;sklearn&lt;/li&gt;
   &lt;li&gt;scipy&lt;/li&gt;
   &lt;li&gt;matplotlib&lt;/li&gt;
+  &lt;li&gt;plotly_express &lt;a href=&quot;https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&amp;amp;utm_medium=social_link&amp;amp;utm_source=missinglettr-twitter&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;All packages are being managed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/p&gt;
