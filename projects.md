@@ -4,4 +4,4 @@ title: Projects
 permalink: /projects/
 ---
 
-Some of the cool projects I have taken up.
+Note: This page is under construction.
