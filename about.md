@@ -7,9 +7,9 @@ permalink: /about/
 
 Hey there,
 
-My name is Rahul. I am a Computer Science Student. I maintain this blog to share my thoughts and opinions related to Computer Science and Engineering, focusing on areas such as ML, IoT, Blockchain, HPC, Software Architecture for scalability, etc.
+My name is Rahul. I am a Computer Science student. I maintain this blog to share my thoughts and opinions related to Computer Science and Engineering.
 
-I use and advocate opensource. This website is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io). 
+I use and advocate opensource. Design used here is borrowed from [Jekyll themes](https://agusmakmun.github.io/) and is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further. 
 
 
 **Reach me here**

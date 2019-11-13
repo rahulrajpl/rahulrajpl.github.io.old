@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Nov 2019 08:48:02 +0530</pubDate>
-    <lastBuildDate>Wed, 06 Nov 2019 08:48:02 +0530</lastBuildDate>
+    <pubDate>Thu, 14 Nov 2019 03:20:29 +0530</pubDate>
+    <lastBuildDate>Thu, 14 Nov 2019 03:20:29 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -76,6 +76,8 @@
   &lt;li&gt;scipy&lt;/li&gt;
   &lt;li&gt;matplotlib&lt;/li&gt;
   &lt;li&gt;plotly_express &lt;a href=&quot;https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&amp;amp;utm_medium=social_link&amp;amp;utm_source=missinglettr-twitter&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Streamlit - For web app of ml model &lt;a href=&quot;https://streamlit.io/docs/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;snyk - For VA of packages&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;All packages are being managed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/p&gt;
