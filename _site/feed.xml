@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Nov 2019 03:20:29 +0530</pubDate>
-    <lastBuildDate>Thu, 14 Nov 2019 03:20:29 +0530</lastBuildDate>
+    <pubDate>Sat, 16 Nov 2019 23:15:33 +0530</pubDate>
+    <lastBuildDate>Sat, 16 Nov 2019 23:15:33 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -65,7 +65,7 @@
     
       <item>
         <title>Python packages I keep a watch on</title>
-        <description>&lt;p&gt;I keep a close watch on or actively use following python packages:-&lt;/p&gt;
+        <description>&lt;p&gt;Libraries on my watch list! This is page is under construction&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Numpy&lt;/li&gt;
@@ -78,6 +78,7 @@
   &lt;li&gt;plotly_express &lt;a href=&quot;https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&amp;amp;utm_medium=social_link&amp;amp;utm_source=missinglettr-twitter&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Streamlit - For web app of ml model &lt;a href=&quot;https://streamlit.io/docs/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;snyk - For VA of packages&lt;/li&gt;
+  &lt;li&gt;megaman - For scalable manifold learning &lt;a href=&quot;https://github.com/mmp2/megaman&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;All packages are being managed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/p&gt;
