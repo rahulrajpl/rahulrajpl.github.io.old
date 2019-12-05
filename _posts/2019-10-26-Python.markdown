@@ -19,6 +19,7 @@ Libraries on my watch list! This is page is under construction
 * Streamlit - For web app of ml model [Ref](https://streamlit.io/docs/)
 * snyk - For VA of packages
 * megaman - For scalable manifold learning [Ref](https://github.com/mmp2/megaman)
+* modin - For speeding up pandas
 
 All packages are being managed using `pip`
 
