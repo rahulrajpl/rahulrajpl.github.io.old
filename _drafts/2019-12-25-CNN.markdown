@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Convolutional Neural Network using PyTorch"
+categories: [python, ML]
+comments: true
+---
+
+Convolutional Neural Network using PyTorch.
+
+Notebook can be accessed here: [link](https://colab.research.google.com/drive/1BUUQvPNBbjJNiXeMWNDquxZRYZsGSjEU)
+
+Credits:
+
+    PyTorch for Deep Learning and Computer Vision
+
+    Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
