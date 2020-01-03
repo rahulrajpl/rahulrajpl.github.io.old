@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Nov 2019 17:15:18 +0530</pubDate>
-    <lastBuildDate>Sun, 24 Nov 2019 17:15:18 +0530</lastBuildDate>
+    <pubDate>Fri, 03 Jan 2020 14:04:23 +0530</pubDate>
+    <lastBuildDate>Fri, 03 Jan 2020 14:04:23 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -196,6 +196,7 @@ NameError: name 'X_mapped' is not defined
   &lt;li&gt;Streamlit - For web app of ml model &lt;a href=&quot;https://streamlit.io/docs/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;snyk - For VA of packages&lt;/li&gt;
   &lt;li&gt;megaman - For scalable manifold learning &lt;a href=&quot;https://github.com/mmp2/megaman&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;modin - For speeding up pandas&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;All packages are being managed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/p&gt;
