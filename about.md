@@ -9,9 +9,7 @@ Hey there,
 
 My name is Rahul. I am a Computer Science student. I maintain this blog to share my thoughts and opinions related to Computer Science and Engineering.
 
-I use and advocate opensource. Design used here is borrowed from [Jekyll themes](https://agusmakmun.github.io/) and is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further. 
-
-
+------------
 **Reach me here**
 
 Room No: RM302,<br>
@@ -19,10 +17,17 @@ Room No: RM302,<br>
 [Indian Institute of Technology, Kanpur](http://www.iitk.ac.in/)<br>
 Kalyanpur, Kanpur, UP - 208016
 
+------------
 **Advisor**
 
 [Dr. Prabhakar T.V](https://www.cse.iitk.ac.in/users/tvp/)
 
+------------
+**Thanks**
 
 
-    
+I have borrowed the hardwork of following people to build this website. Thanks to
+1. [Agusmakmun](https://github.com/agusmakmun)(for the jekyll theme)
+2. [Jeff Donahue](http://jeffdonahue.com/) (for the email unscramble script)
+
+I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.    
