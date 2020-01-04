@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Malware fine grained classification - ~/personal/web/logs</title>
+    <title>Image Style Transfer using Convolutional Neural Network - ~/personal/web/logs</title>
     <meta name="author" content="RandomWalk" />
-    <meta name="description" content="Malware fine grained classification" />
-    <meta name="keywords" content="Malware fine grained classification, ~/personal/web/logs, " />
+    <meta name="description" content="Image Style Transfer using Convolutional Neural Network" />
+    <meta name="keywords" content="Image Style Transfer using Convolutional Neural Network, ~/personal/web/logs, python, ML" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/personal/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Malware fine grained classification" property="og:title">
+      <meta content="Image Style Transfer using Convolutional Neural Network" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,17 +25,19 @@
     
 
     
-      <meta content="http://localhost:4000/project/malware/" property="og:url">
+      <meta content="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html" property="og:url">
     
 
     
-      <meta content="2020-01-04T20:25:35+05:30" property="article:published_time">
+      <meta content="2020-01-03T00:00:00+05:30" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
     
 
     
+      
+        <meta content="python" property="article:section">
       
     
 
@@ -48,11 +50,11 @@
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Malware fine grained classification">
+      <meta name="twitter:title" content="Image Style Transfer using Convolutional Neural Network">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/project/malware/">
+      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">
     
 
     
@@ -134,56 +136,179 @@
         <!-- end /.fixed-condition -->
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
-        <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">Malware fine grained classification</h1>
-    
-      
-    
-      
-        <span class="time">Oct 2019</span> &raquo;
-        
-          <span class="tags tag-filter">Python</span>
-        
-          <span class="tags tag-filter">Machine Learning</span>
-        
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </header>
+        <header class="post-header">
+  <h1 class="post-title">Image Style Transfer using Convolutional Neural Network</h1>
+  
+</header>
 
-  <div class="content">
-    
-      
-    
-      
-        <a href="/static/projects/malware.gif" class="thickbox">
-          <img src="/static/projects/malware.gif" alt="Malware fine grained classification" title="Malware fine grained classification">
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    <hr />
-    <p>In this project I have played around with the famous KDD Cup 99 dataset and the challenge is to classify the network connections as ‘good’ or ‘bad’. Details of the project can be seen in the repo.</p>
+<span class="time">03 Jan 2020</span>
 
-<p>Generally people model algorithms on the 10% percent dataset, due to huge size, and apply it to full dataset. Thanks to Google Colab for the free GPUs I was able to run the nerual net from tensorflow 2.0 library on full dataset. Accuracy obtianed in 99.75</p>
+  <span class="categories">
+    &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
+  </span>
 
-  </div>
-</article>
+
+<div class="content">
+  <div class="post"><h3 id="original-paper"><em>Original paper</em></h3>
+
+<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image style transfer using Convolutional Neural Network</a>.</p>
+
+<h3 id="code"><em>Code</em></h3>
+
+<p>Implementation using pytorch - <a href="https://colab.research.google.com/drive/10lvm78PdFyjkFixoMYD6DgH-Hpgt3Ja7">link</a></p>
+
+<h3 id="learning"><em>Learning</em></h3>
+
+<ul>
+  <li>Transfer Learning</li>
+  <li>Pretrained models (AlexNet, VGG16, VGG19)</li>
+  <li>video generation using cv2 library</li>
+  <li>Speeding up the training using CUDA/ GPU</li>
+</ul>
+
+<h3 id="credits"><em>Credits</em>:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PyTorch for Deep Learning and Computer Vision
+
+Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
+</code></pre></div></div>
+</div>
+  
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rahulrajpl">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=0192837465raj";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/ml/2019/12/25/CNN.html">Convolutional Neural Network using PyTorch</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2019/10/27/Install-Python-copy.html">Install python3.6+ for local user on remote machine without root access</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2019/10/26/Python.html">Python packages I keep a watch on</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+  
+  
+  </ul>
+</div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/python/ml/2019/12/25/CNN.html">&laquo; Convolutional Neural Network using PyTorch</a>
+  
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "randomwalk-in";
+    var disqus_identifier = "http://localhost:4000_Image Style Transfer using Convolutional Neural Network";
+    var disqus_title = "Image Style Transfer using Convolutional Neural Network";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
 
         <footer style="text-align: right;">
           &copy; RandomWalk
