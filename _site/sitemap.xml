@@ -5,9 +5,30 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jan 2020 20:46:32 +0530</pubDate>
-    <lastBuildDate>Sat, 04 Jan 2020 20:46:32 +0530</lastBuildDate>
+    <pubDate>Mon, 06 Jan 2020 00:48:15 +0530</pubDate>
+    <lastBuildDate>Mon, 06 Jan 2020 00:48:15 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Introduction to dynamic realtime plotting with Plotly/Dash</title>
+        <description>&lt;h3 id=&quot;oblutrack&quot;&gt;ObluTrack&lt;/h3&gt;
+
+&lt;p&gt;Present Target: Dynamic realtime plotting of sensor data from OBLU device to a web based GUI using plotly/dash&lt;/p&gt;
+
+&lt;p&gt;SneakPeak:
+&lt;img src=&quot;https://media.giphy.com/media/fYBi803HsDsibgRJpc/giphy.gif&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 06 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html</guid>
+        
+        
+        <category>python</category>
+        
+        <category>DataViz</category>
+        
+      </item>
     
       <item>
         <title>Image Style Transfer using Convolutional Neural Network</title>
