@@ -21,3 +21,7 @@ Access the sensor data from OBLU Device and plot it dynamically to get the real 
 ![link](https://media.giphy.com/media/fYBi803HsDsibgRJpc/giphy.gif)
 
 This post is being updated...
+
+### Thanks:
+    [1] https://community.plot.ly
+    [2] https://pythonprogramming.net/live-graphs-data-visualization-application-dash-python-tutorial/ (via @Sentdex )
