@@ -5,19 +5,29 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Jan 2020 00:48:15 +0530</pubDate>
-    <lastBuildDate>Mon, 06 Jan 2020 00:48:15 +0530</lastBuildDate>
+    <pubDate>Mon, 06 Jan 2020 00:53:44 +0530</pubDate>
+    <lastBuildDate>Mon, 06 Jan 2020 00:53:44 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Introduction to dynamic realtime plotting with Plotly/Dash</title>
-        <description>&lt;h3 id=&quot;oblutrack&quot;&gt;ObluTrack&lt;/h3&gt;
+        <description>&lt;p&gt;–DRAFT POST–&lt;/p&gt;
 
-&lt;p&gt;Present Target: Dynamic realtime plotting of sensor data from OBLU device to a web based GUI using plotly/dash&lt;/p&gt;
+&lt;h3 id=&quot;oblutrack&quot;&gt;ObluTrack&lt;/h3&gt;
 
-&lt;p&gt;SneakPeak:
-&lt;img src=&quot;https://media.giphy.com/media/fYBi803HsDsibgRJpc/giphy.gif&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Code for this project can be found &lt;a href=&quot;https://github.com/rahulrajpl/oblutrack&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;present-stage&quot;&gt;Present Stage:&lt;/h3&gt;
+&lt;p&gt;Dynamic realtime plotting of randomly generated x,y data to a web based GUI using plotly/dash&lt;/p&gt;
+
+&lt;h3 id=&quot;next-target&quot;&gt;Next Target:&lt;/h3&gt;
+&lt;p&gt;Access the sensor data from OBLU Device and plot it dynamically to get the real time trail&lt;/p&gt;
+
+&lt;h3 id=&quot;sneakpeak&quot;&gt;SneakPeak:&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/fYBi803HsDsibgRJpc/giphy.gif&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This post is being updated…&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 Jan 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html</link>
