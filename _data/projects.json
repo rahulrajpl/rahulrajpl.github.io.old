@@ -13,7 +13,7 @@
 		"image": "malware.gif",
 		"url": "https://github.com/rahulrajpl/malware-fine-grained-classification",
 		"date": "Oct 2019",
-		"tags": ["Python","Machine Learning"]
+		"tags": ["Python","Machine Learning", "Cybersecurity"]
 	},
 	{
 		"slug" : "bias",
