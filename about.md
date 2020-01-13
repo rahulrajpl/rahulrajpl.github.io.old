@@ -31,3 +31,8 @@ I have borrowed the hardwork of following people to build this website. Thanks t
 2. [Jeff Donahue](http://jeffdonahue.com/) (for the email unscramble script)
 
 I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.    
+
+------------
+**Disclaimer**
+
+All pictures available in this website are 'labelled for reuse'. Most pictures used for projects pages are representational. All efforts have been made to ensure references to original sources for every blog or project or otherwise. If something is still missing, please email me for inclusion. 
