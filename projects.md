@@ -4,4 +4,4 @@ title: Projects
 permalink: /projects/
 ---
 
-Note: This page is under construction.
+Note: This page lists various side projects taken up. Page is being updated with details.
