@@ -5,19 +5,20 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jan 2020 10:49:27 +0530</pubDate>
-    <lastBuildDate>Wed, 15 Jan 2020 10:49:27 +0530</lastBuildDate>
+    <pubDate>Wed, 15 Jan 2020 15:10:14 +0530</pubDate>
+    <lastBuildDate>Wed, 15 Jan 2020 15:10:14 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Gentle introduction to Malicious Software or Malware</title>
-        <description>&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
+        <title>Gentle Introduction to Malicious Software or Malware</title>
+        <description>&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Malicious logic, more commonly called malware, is a set of instructions that cause a site’s security policy to be violated.&lt;sup id=&quot;fnref:fn1&quot;&gt;&lt;a href=&quot;#fn:fn1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;In earlier days, when UNIX systems were popular, the hackers found a new way to get access to victims machine with a little piece of malicious code like the one below&lt;/p&gt;
+&lt;p&gt;Malware is the swiss-army knife of cyber criminals and any other adversary to your corporation or organization&lt;sup id=&quot;fnref:fn2&quot;&gt;&lt;a href=&quot;#fn:fn2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In earlier days, when UNIX systems were popular, the hackers found a new way to get access to victims machine with a little piece of malicious code like the one below&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh &lt;/span&gt;
 
@@ -32,14 +33,72 @@
 &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; ./ls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;When this file is saved with the file name ‘ls’ is victim’s machine,&lt;/p&gt;
+&lt;p&gt;When this file is saved with the file name ‘ls’ is victim’s home directory, and if the root user in victim’s machine executes ‘ls’ command, above script will run and it creates a copy of the shell in /tmp/ directory with the root previleges. Above script also deletes the file and thus leaves no trail. Now the copy of shell can be used for all non-sensible things by the hacker.&lt;/p&gt;
 
-&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;p&gt;But, this trick won’t work anymore as the current directory ‘.’ is not in the system path variable by default in any latest LINUX systems. But nothing stops you from adding ‘.’ into the $PATH variable.&lt;/p&gt;
 
+&lt;hr /&gt;
+&lt;h4 id=&quot;types-of-malwares-and-its-definitions&quot;&gt;Types of malwares and its definitions&lt;/h4&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Further in this post, let’s see the various types of malware and its formal definitions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;Trojan horse&lt;/strong&gt; is a program with an overt (documented or known) purpose and a covert (undocumented or unexpected) purpose. A Trojan horse is a program with an overt (documented or known) purpose and a covert (undocumented or unexpected) purpose. A &lt;em&gt;rootkit&lt;/em&gt; is a pernicious trojan hourse. It hides in the system and can avoid detection. A trojan hourse can be a &lt;em&gt;propagating&lt;/em&gt; one as well.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;computer virus&lt;/strong&gt; is a program that inserts (a possibly transformed version of) itself into one or more files and then performs some (possibly null) action.
+    &lt;ul&gt;
+      &lt;li&gt;A boot sector infector is a virus that inserts itself into the boot sector of a disk. Eg. Brain Virus of IBM Machine.&lt;/li&gt;
+      &lt;li&gt;An executable infector is a virus that infects executable programs. Eg. Jerusalem Virus (Also called Israeli Virus).&lt;/li&gt;
+      &lt;li&gt;A multipartite virus is one that can infect both boot sectors and applications.&lt;/li&gt;
+      &lt;li&gt;A macro virus is a virus composed of a sequence of instructions that is interpreted, rather than executed directly. Eg. Melissa Virus of MSWord97/98 docs.&lt;/li&gt;
+      &lt;li&gt;A terminate and stay resident (TSR) virus is one that stays active (resident) in memory after the application, bootstrapping, or macro interpretation has terminated.&lt;/li&gt;
+      &lt;li&gt;Stealth viruses are viruses that conceal the infection of files.&lt;/li&gt;
+      &lt;li&gt;An encrypted virus is a virus that encrypts all of the virus except the cryptographic key and a decryption key.&lt;/li&gt;
+      &lt;li&gt;A metamorphic virus is a virus that changes its internal structure but performs the same actions each time it is executed. Eg. Zmist(W95)&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;computer worm&lt;/strong&gt; is a program that copies itself from one computer to another. Eg. Stuxnet worm, the Internet Worm, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;bot&lt;/strong&gt; is malware that carries out some action in coordination with other bots. The attacker, called a botmaster, controls the bots from one or more systems called command and control (C&amp;amp;C) servers or motherships. They communicate over paths called C&amp;amp;C channels. A collection of bots is a &lt;strong&gt;botnet&lt;/strong&gt;. Eg. Torpig, GTBot, etc.
+    &lt;ul&gt;
+      &lt;li&gt;Botnet developers discovered how to use this to increase the difficulty of
+locating bots, especially those used as botmasters. The idea is to associate a list of IP addresses with a particular host name. The binding between the host name and the IP address changes rapidly, with the next IP address selected from that list. These botnets are called IP flux botnets&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;bacterium&lt;/strong&gt; or a &lt;strong&gt;rabbit&lt;/strong&gt; is a program that absorbs all of some class of resource.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;strong&gt;logic bomb&lt;/strong&gt; is a program that performs an action that violates the security policy when some external event occurs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Adware&lt;/strong&gt; is a Trojan horse that gathers information for marketing purposes and displays advertisements, often based on the gathered information.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Spyware&lt;/strong&gt; is a Trojan horse that records information about the use of a computer, usually resulting in confidential information such as keystrokes, passwords, credit card numbers, and visits to web sites. The information may be transmitted to a third party, stored for later transmission, or stored for retrieval by a third party. Eg. Pegasus&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ransomware&lt;/strong&gt; is malware that inhibits the use of resources until a ransom, usually monetary, is paid. Eg. Wannacry, CryptoLocker, etc.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Today’s malware is combination of various types of above mentioned ones and detecting whether a program is malware or not is &lt;strong&gt;undecidable&lt;/strong&gt; as per Rice’s Theorem.&lt;sup id=&quot;fnref:fn3&quot;&gt;&lt;a href=&quot;#fn:fn3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;references&quot;&gt;References:&lt;/h4&gt;
+&lt;hr /&gt;
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:fn1&quot;&gt;
       &lt;p&gt;Computer Security - Arts and Science, &lt;em&gt;Matt Bishop&lt;/em&gt; (Ch23 of 2nd Edition) &lt;a href=&quot;#fnref:fn1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fn2&quot;&gt;
+      &lt;p&gt;https://cuckoosandbox.org &lt;a href=&quot;#fnref:fn2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fn3&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Rice%27s_theorem &lt;a href=&quot;#fnref:fn3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
