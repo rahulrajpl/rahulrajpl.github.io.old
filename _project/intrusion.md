@@ -1,12 +1,12 @@
 ---
 layout: project_single
-title:  "Malware fine grained classification"
-slug: "malware"
+title:  "Network Intrusion Detector using Machine Learning"
+slug: "intrusion"
 ---
 
 (*Image is representational*)
 
-In this project experiments were carried out on KDD Cup 99 dataset and the challenge is to classify the network connections as 'good' or 'bad'. 
+In this project, experiments were carried out on KDD Cup 99 dataset and the challenge is to classify the network connections as 'good' or 'bad'. 
 
 General details to the challenge is [here](http://kdd.ics.uci.edu/databases/kddcup99/task.html)
 

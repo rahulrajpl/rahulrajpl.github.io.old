@@ -8,8 +8,8 @@
 		"tags": ["Jekyll"]
 	},
 	{
-		"slug" : "malware",
-		"name": "Malware classification",
+		"slug" : "intrusion",
+		"name": "Intrusion Detector Learning",
 		"image": "malware.gif",
 		"url": "https://github.com/rahulrajpl/malware-fine-grained-classification",
 		"date": "Oct 2019",
