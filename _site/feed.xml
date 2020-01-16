@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Jan 2020 07:49:50 +0530</pubDate>
-    <lastBuildDate>Thu, 16 Jan 2020 07:49:50 +0530</lastBuildDate>
+    <pubDate>Thu, 16 Jan 2020 07:52:03 +0530</pubDate>
+    <lastBuildDate>Thu, 16 Jan 2020 07:52:03 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -97,7 +97,7 @@
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Video tutorial by Mr. Corey Schafer. &lt;a href=&quot;https://www.youtube.com/watch?v=Ercd-Ip5PfQ&quot;&gt;watch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Build up over 2D plotting video tutorial by Mr. Corey Schafer. &lt;a href=&quot;https://www.youtube.com/watch?v=Ercd-Ip5PfQ&quot;&gt;watch&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -195,6 +195,9 @@ locating bots, especially those used as botmasters. The idea is to associate a l
 &lt;hr /&gt;
 &lt;h4 id=&quot;references&quot;&gt;References:&lt;/h4&gt;
 &lt;hr /&gt;
+&lt;!--stackedit_data:
+eyJoaXN0b3J5IjpbMzA0MDczNTU0XX0=
+--&gt;
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:fn1&quot;&gt;

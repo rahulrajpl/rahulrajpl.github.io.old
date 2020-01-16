@@ -94,4 +94,4 @@ plt.show()
 -----------------------
 #### References:
 -----------------------
-[^1]: Video tutorial by Mr. Corey Schafer. [watch](https://www.youtube.com/watch?v=Ercd-Ip5PfQ)
+[^1]: Build up over 2D plotting video tutorial by Mr. Corey Schafer. [watch](https://www.youtube.com/watch?v=Ercd-Ip5PfQ)
