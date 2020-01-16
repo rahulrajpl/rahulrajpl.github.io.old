@@ -46,5 +46,13 @@
 		"url": "https://github.com/rahulrajpl/PyPASAD",
 		"date": "Sept 2019",
 		"tags": ["Python", "Cybersecurity"]
+	},
+	{
+		"slug" : "django",
+		"name": "Websites in Django",
+		"image": "heroku.png",
+		"url": "https://github.com/rahulrajpl/kartik-blog",
+		"date": "Oct 2019",
+		"tags": ["Python", "Django"]
 	}
 ]
