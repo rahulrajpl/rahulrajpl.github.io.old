@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Profile](static/img/prof1.jpg)
+![--](static/img/prof1.jpg)
 
 Hey there,
 
