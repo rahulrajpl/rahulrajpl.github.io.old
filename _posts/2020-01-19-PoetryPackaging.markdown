@@ -77,6 +77,19 @@ In case your program has some dependecy, you can add it via `poetry add <package
 
 Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool `pip` [^4]
 Run the following command to publish your package
+
+~~~bash
+poetry build
+~~~
+
+Then publish it(Here you have to enter your pyPI credentials)
+
+~~~bash
+peotry publish
+~~~
+
+Or you can do it with single command as below
+
 ~~~bash
 poetry publish --username <YOUR-USERNAME> --password <YOUR-PASSWORD> --build
 ~~~
@@ -91,7 +104,7 @@ Now that your tool is available to outside world to use.
 
 Now anyone can install this tool by running,
 ~~~bash
-$ sudo pip install demo-tool
+$ sudo pip3 install demo-tool
 ~~~
 This will create a system-wide availability of the command 'demo-tool' and can be run by simply executing `demo-tool` anywhere from the system.
 

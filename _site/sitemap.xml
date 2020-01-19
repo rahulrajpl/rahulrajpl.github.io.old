@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jan 2020 10:38:22 +0530</pubDate>
-    <lastBuildDate>Sun, 19 Jan 2020 10:38:22 +0530</lastBuildDate>
+    <pubDate>Sun, 19 Jan 2020 10:41:44 +0530</pubDate>
+    <lastBuildDate>Sun, 19 Jan 2020 10:41:44 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -75,6 +75,17 @@ demo-tool &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1
 
 &lt;p&gt;Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;
 Run the following command to publish your package&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;poetry build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then publish it(Here you have to enter your pyPI credentials)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;peotry publish
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or you can do it with single command as below&lt;/p&gt;
+
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;poetry publish &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &amp;lt;YOUR-USERNAME&amp;gt; &lt;span class=&quot;nt&quot;&gt;--password&lt;/span&gt; &amp;lt;YOUR-PASSWORD&amp;gt; &lt;span class=&quot;nt&quot;&gt;--build&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -87,7 +98,7 @@ Run the following command to publish your package&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;Now anyone can install this tool by running,&lt;/p&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;demo-tool
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;demo-tool
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;This will create a system-wide availability of the command ‘demo-tool’ and can be run by simply executing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;demo-tool&lt;/code&gt; anywhere from the system.&lt;/p&gt;
 

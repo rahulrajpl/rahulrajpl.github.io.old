@@ -218,6 +218,17 @@ demo-tool <span class="o">=</span> <span class="s1">'demo-tool:main'</span>
 
 <p>Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool <code class="language-plaintext highlighter-rouge">pip</code> <sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>
 Run the following command to publish your package</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry build
+</code></pre></div></div>
+
+<p>Then publish it(Here you have to enter your pyPI credentials)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>peotry publish
+</code></pre></div></div>
+
+<p>Or you can do it with single command as below</p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry publish <span class="nt">--username</span> &lt;YOUR-USERNAME&gt; <span class="nt">--password</span> &lt;YOUR-PASSWORD&gt; <span class="nt">--build</span>
 </code></pre></div></div>
 
@@ -230,7 +241,7 @@ Run the following command to publish your package</p>
 <hr />
 
 <p>Now anyone can install this tool by running,</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pip <span class="nb">install </span>demo-tool
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pip3 <span class="nb">install </span>demo-tool
 </code></pre></div></div>
 <p>This will create a system-wide availability of the command ‘demo-tool’ and can be run by simply executing <code class="language-plaintext highlighter-rouge">demo-tool</code> anywhere from the system.</p>
 
