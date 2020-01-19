@@ -5,9 +5,121 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jan 2020 00:31:41 +0530</pubDate>
-    <lastBuildDate>Sun, 19 Jan 2020 00:31:41 +0530</lastBuildDate>
+    <pubDate>Sun, 19 Jan 2020 08:36:16 +0530</pubDate>
+    <lastBuildDate>Sun, 19 Jan 2020 08:36:16 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Packaging and shipping your python tools using Poetry</title>
+        <description>&lt;p&gt;In this blog let’s see how we can package an application and distrubute it using tool called &lt;strong&gt;poetry&lt;/strong&gt;.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;step-1-download-and-install-poetry&quot;&gt;Step 1. Download and Install Poetry&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-sSL&lt;/span&gt; https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.poetry/env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Check the installation correctly by executing&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;poetry &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If this throws and error regarding ‘threads’ like the one below&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rahul@rahul-lap:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;poetry &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+/home/rahul/.poetry/lib/poetry/_vendor/py2.7/subprocess32.py:149: RuntimeWarning: The _posixsubprocess module is not being used. Child process reliability may suffer &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;your program uses threads.
+  &lt;span class=&quot;s2&quot;&gt;&quot;program uses threads.&quot;&lt;/span&gt;, RuntimeWarning&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Poetry version 1.0.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;, you might need to change the first line in configuration &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.poetry/bin/poetry&lt;/code&gt; from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#!/usr/bin/env python&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#!/usr/bin/env python3&lt;/code&gt;. Save this file and execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry --version&lt;/code&gt; again to check for errors if any.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;step-2-packaging&quot;&gt;Step 2. Packaging&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;If you have a simple script written in python, something similar following ‘demo-tool’&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;, you have to go the project directory, open up the terminal and execute, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry init&lt;/code&gt;. This command will guide you to create the most important file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pyproject.toml&lt;/code&gt;, which will orchestrate the packaging for you. Once the interactive generation is finishied, this file will look like below&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tool.poetry]
+name &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;demo-tool&quot;&lt;/span&gt;
+version &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0.1.0&quot;&lt;/span&gt;
+description &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;a demo tool for printing hello world&quot;&lt;/span&gt;
+authors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Your Name &amp;lt;you@example.com&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+license &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;MIT&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tool.poetry.dependencies]
+python &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^3.7&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tool.poetry.dev-dependencies]
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;build-system]
+requires &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;poetry&amp;gt;=0.12&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+build-backend &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;poetry.masonry.api&quot;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can add an entry point to the file using ‘console_script’ in poetry way. Following lines to be appended to our demo program.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tool.poetry.scripts]
+demo-tool &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'demo-tool:main'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;In case your program has some dependecy, you can add it via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry add &amp;lt;package-name&amp;gt;&lt;/code&gt;. For example, if your program depends on beautifulsoup webscrapping library, you have to add this dependency to the toml file by running the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poetry add beautifulsoup4&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;step-3-distributing&quot;&gt;Step 3. Distributing&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;
+Run the following command to publish your package&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;poetry publish &lt;span class=&quot;nt&quot;&gt;--username&lt;/span&gt; &amp;lt;YOUR-USERNAME&amp;gt; &lt;span class=&quot;nt&quot;&gt;--password&lt;/span&gt; &amp;lt;YOUR-PASSWORD&amp;gt; &lt;span class=&quot;nt&quot;&gt;--build&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you do not have an account in PyPI, go to &lt;a href=&quot;https://pypi.org&quot;&gt;pypi.org&lt;/a&gt; and create and account.&lt;/p&gt;
+
+&lt;p&gt;Now that your tool is available to outside world to use.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;step-4-installation-and-usage&quot;&gt;Step 4. Installation and Usage&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Now anyone can install this tool by running,&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;demo-tool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This will create a system-wide availability of the command ‘demo-tool’ and can be run by simply executing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;demo-tool&lt;/code&gt; anywhere from the system.&lt;/p&gt;
+
+&lt;p&gt;If you want to locally install it, create a virtual environment using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenv venv&lt;/code&gt; and activate it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source /venv/bin/activate&lt;/code&gt; and then run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install demo-tool&lt;/code&gt;. This will be available locally only to this virtual environment.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;https://python-poetry.org/ &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;https://pypi.org/ &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html</guid>
+        
+        
+        <category>python</category>
+        
+        <category>bash</category>
+        
+      </item>
     
       <item>
         <title>Realtime 3D plot using matplotlib library</title>
