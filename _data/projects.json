@@ -1,11 +1,11 @@
 [
 	{
-		"slug": "personal-blog",
-		"name": "PersonalBlog",
-		"image": "rw.png",
-		"url": "https://github.com/rahulrajpl/rahulrajpl.github.io",
-		"date": "Oct 2019",
-		"tags": ["Jekyll"]
+		"slug" : "netizenship",
+		"name": "OSINT tool for uname recon",
+		"image": "netizen.gif",
+		"url": "https://github.com/rahulrajpl/netizenship",
+		"date": "Jan 2020",
+		"tags": ["Python", "Cybersecurity"]
 	},
 	{
 		"slug" : "intrusion",
@@ -54,5 +54,14 @@
 		"url": "https://github.com/rahulrajpl/kartik-blog",
 		"date": "Oct 2019",
 		"tags": ["Python", "Django"]
-	}
+	},
+	
+	{
+		"slug": "personal-blog",
+		"name": "PersonalBlog",
+		"image": "rw.png",
+		"url": "https://github.com/rahulrajpl/rahulrajpl.github.io",
+		"date": "Oct 2019",
+		"tags": ["Jekyll"]
+	},
 ]

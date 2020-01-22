@@ -1,4 +1,4 @@
-title: ~/personal/web/logs
+title: ~/web/logs
 description: Personal website, blogs and other updates
 author: RandomWalk
 github: https://github.com/rahulrajpl
@@ -30,15 +30,17 @@ share:
   twitter_username: rahulrajpl
   fb_appid: 0192837465raj
 
-urls:     
-    - text: About
-      url: /about/
+urls: 
+    - text: Categories
+      url: /category/python   
     - text: Projects
       url: /projects/
+    - text: About
+      url: /about/
     - text: XML Feed
       url: /feed.xml
 
-url: "https://rahulrajpl.github.io"
+url: "https://randomwalk.in"
 baseurl: ""
 paginate: 20
 per_page: 20
