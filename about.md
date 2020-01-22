@@ -7,7 +7,7 @@ permalink: /about/
 
 Hey there,
 
-My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/learning/research/thoughts/opinions, etc. related to Computer Science and Engineering.
+My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to Computer Science and Engineering. 
 
 ------------
 **Reach me here**
