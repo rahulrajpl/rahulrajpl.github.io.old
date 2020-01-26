@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jan 2020 23:12:39 +0530</pubDate>
-    <lastBuildDate>Sun, 26 Jan 2020 23:12:39 +0530</lastBuildDate>
+    <pubDate>Sun, 26 Jan 2020 23:16:41 +0530</pubDate>
+    <lastBuildDate>Sun, 26 Jan 2020 23:16:41 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -27,7 +27,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;Pretrained model approach to implement transfer learning&lt;/li&gt;
-  &lt;li&gt;Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexa, etc.&lt;/li&gt;
+  &lt;li&gt;Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexanet, etc.&lt;/li&gt;
   &lt;li&gt;Implementation and practical example to demonstrate&lt;/li&gt;
 &lt;/ol&gt;
 

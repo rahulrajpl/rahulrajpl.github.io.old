@@ -20,7 +20,7 @@ This lesson is part of tutorial, 'Pytorch for Deep Learning and Computer Vision'
 -----------------------
 
 1. Pretrained model approach to implement transfer learning
-2. Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexa, etc.
+2. Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexanet, etc.
 3. Implementation and practical example to demonstrate
 
 -----------------------
