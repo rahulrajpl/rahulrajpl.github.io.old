@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Image Style Transfer using Convolutional Neural Network - ~/web/logs</title>
+    <title>Maximising accuracy with limited training data using Transfer Learning  - ~/web/logs</title>
     <meta name="author" content="RandomWalk" />
-    <meta name="description" content="Image Style Transfer using Convolutional Neural Network" />
-    <meta name="keywords" content="Image Style Transfer using Convolutional Neural Network, ~/web/logs, python, ML" />
+    <meta name="description" content="Maximising accuracy with limited training data using Transfer Learning " />
+    <meta name="keywords" content="Maximising accuracy with limited training data using Transfer Learning , ~/web/logs, python, ML" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Image Style Transfer using Convolutional Neural Network" property="og:title">
+      <meta content="Maximising accuracy with limited training data using Transfer Learning " property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,11 +25,11 @@
     
 
     
-      <meta content="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html" property="og:url">
+      <meta content="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html" property="og:url">
     
 
     
-      <meta content="2020-01-03T00:00:00+05:30" property="article:published_time">
+      <meta content="2020-01-26T00:00:00+05:30" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Image Style Transfer using Convolutional Neural Network">
+      <meta name="twitter:title" content="Maximising accuracy with limited training data using Transfer Learning ">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">
+      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">
     
 
     
@@ -144,11 +144,11 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Image Style Transfer using Convolutional Neural Network</h1>
+  <h1 class="post-title">Maximising accuracy with limited training data using Transfer Learning </h1>
   
 </header>
 
-<span class="time">03 Jan 2020</span>
+<span class="time">26 Jan 2020</span>
 
   <span class="categories">
     &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
@@ -156,29 +156,30 @@
 
 
 <div class="content">
-  <div class="post"><h3 id="original-paper"><em>Original paper</em></h3>
+  <div class="post"><hr />
+<h3 id="introduction">Introduction</h3>
+<hr />
 
-<p><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image style transfer using Convolutional Neural Network</a>.</p>
+<p>Transfer Learning is a technique in Deep Learning in which the model trained in one problem is reused partly in another problem. This technique can be a powerful tool to acquire the highest accuracy with very limited data, which otherwise would not be possible.</p>
 
-<h3 id="code"><em>Code</em></h3>
+<p>Transfer learning is demonstrated using pytorch and pretrained model called vgg16 in <a href="https://colab.research.google.com/drive/121mSI7rwrdEM9CMnmQn1zH260bUtJzqh">this</a> colab file.</p>
 
-<p>Implementation using pytorch - <a href="https://colab.research.google.com/drive/10lvm78PdFyjkFixoMYD6DgH-Hpgt3Ja7">link</a></p>
+<p>This lesson is part of tutorial, ‘Pytorch for Deep Learning and Computer Vision’ by Rayan Slim, Jad Slim, Amer Sharaf and Sarmad Tanveer. It is available in learning.oreilly.com</p>
 
-<h3 id="learning"><em>Learning</em></h3>
+<hr />
+<h3 id="learnings">Learnings</h3>
+<hr />
 
-<ul>
-  <li>Transfer Learning</li>
-  <li>Pretrained models (AlexNet, VGG16, VGG19)</li>
-  <li>video generation using cv2 library</li>
-  <li>Speeding up the training using CUDA/ GPU</li>
-</ul>
+<ol>
+  <li>Pretrained model approach to implement transfer learning</li>
+  <li>Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexa, etc.</li>
+  <li>Implementation and practical example to demonstrate</li>
+</ol>
 
-<h3 id="credits"><em>Credits</em>:</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PyTorch for Deep Learning and Computer Vision
-
-Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
-</code></pre></div></div>
+<hr />
+<h3 id="references">References:</h3>
+<hr />
+<p>This lesson is part of tutorial, ‘Pytorch for Deep Learning and Computer Vision’ by Rayan Slim, Jad Slim, Amer Sharaf and Sarmad Tanveer. It is available in learning.oreilly.com</p>
 </div>
   
   <div class="share-page">
@@ -189,7 +190,7 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -209,44 +210,34 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
       
         
           
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
             
             <div class="panel-body">
               <h4>Related Posts</h4>
               <ul>
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
-      
-    
-        
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
             
                 <li class="relatedPost">
                   <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
@@ -331,6 +322,16 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
       
         
           
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
+          
+          
+        
       
           
       
@@ -402,10 +403,8 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 
 <div class="PageNavigation">
   
-    <a class="prev" href="/python/ml/2019/12/25/CNN.html">&laquo; Convolutional Neural Network using PyTorch</a>
+    <a class="prev" href="/security/2020/01/22/passive-reconnaissance.html">&laquo; Passive OSINT tools for beginners</a>
   
-  
-    <a class="next" href="/python/dataviz/2020/01/06/dash-intro.html">Introduction to dynamic realtime plotting with Plotly/Dash &raquo;</a>
   
 </div>
 
@@ -414,8 +413,8 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Image Style Transfer using Convolutional Neural Network";
-    var disqus_title = "Image Style Transfer using Convolutional Neural Network";
+    var disqus_identifier = "http://localhost:4000_Maximising accuracy with limited training data using Transfer Learning ";
+    var disqus_title = "Maximising accuracy with limited training data using Transfer Learning ";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
