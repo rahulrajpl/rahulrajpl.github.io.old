@@ -160,13 +160,13 @@
 <h3 id="introduction">Introduction</h3>
 <hr />
 
-<p>In this blog, we will see how to set up the cuckoo sandbox and virtual box for malware analysis. It is assumed that the host machine is installed with Ubuntu 18.04 or above with VirtualBox software.</p>
+<p>In this blog, we will see how to set up the cuckoo sandbox and virtual box for malware analysis and installing ‘kioptrix’ boot-to-root VMs for penetration testing exercise. It is assumed that the host machine is installed with Ubuntu 18.04 or above with VirtualBox software.</p>
 
 <hr />
 <h3 id="configuring-cuckoo-sandbox">Configuring Cuckoo Sandbox</h3>
 <hr />
 
-<p>Step 1: Download Cuckoo_setup.zip from Google Drive(<em>Link will be provided on request</em>)<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+<p>Step 1: Download Cuckoo_setup.zip from Google Drive(<em>Link will be provided on request</em>)</p>
 
 <p>Step 2: “Run cuckoo_framework_install.sh” after unzipping the downloaded file from step 1. Cuckoo will work with python2 at the time of writing this, however, active development for porting the tool to python3 is in progress this year.</p>
 
@@ -174,7 +174,7 @@
 
 <p>Step 4: Open up cuckoo2 in the VM. Check the IP address of the machine by running command ‘ipconfig’ in the cmd prompt. You will see and IP like <strong>192.168.56.10X</strong>. Now go to the Machine tab, click on ‘Take Snapshot’ to save a snapshot of the machine.</p>
 
-<p>Step 5: Final configuration changes to be done for cuckoo sandbox is as follows-</p>
+<p>Step 5: Final configuration changes to be done for cuckoo sandbox is as follows-<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
 <ul>
   <li>Go to the path ‘/home/username/.cuckoo’ and find the ‘conf’ folder.</li>
