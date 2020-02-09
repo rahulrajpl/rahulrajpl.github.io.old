@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Python packages I keep a watch on - ~/web/logs</title>
+    <title>Setting up Cuckoo Sandbox and VM for Malware Analysis - ~/web/logs</title>
     <meta name="author" content="RandomWalk" />
-    <meta name="description" content="Python packages I keep a watch on" />
-    <meta name="keywords" content="Python packages I keep a watch on, ~/web/logs, python" />
+    <meta name="description" content="Setting up Cuckoo Sandbox and VM for Malware Analysis" />
+    <meta name="keywords" content="Setting up Cuckoo Sandbox and VM for Malware Analysis, ~/web/logs, security" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Python packages I keep a watch on" property="og:title">
+      <meta content="Setting up Cuckoo Sandbox and VM for Malware Analysis" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,11 +25,11 @@
     
 
     
-      <meta content="http://localhost:4000/python/2019/10/26/Python.html" property="og:url">
+      <meta content="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html" property="og:url">
     
 
     
-      <meta content="2019-10-26T00:00:00+05:30" property="article:published_time">
+      <meta content="2020-01-30T00:00:00+05:30" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
@@ -37,7 +37,7 @@
 
     
       
-        <meta content="python" property="article:section">
+        <meta content="security" property="article:section">
       
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Python packages I keep a watch on">
+      <meta name="twitter:title" content="Setting up Cuckoo Sandbox and VM for Malware Analysis">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/python/2019/10/26/Python.html">
+      <meta name="twitter:url" content="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html">
     
 
     
@@ -144,46 +144,31 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Python packages I keep a watch on</h1>
+  <h1 class="post-title">Setting up Cuckoo Sandbox and VM for Malware Analysis</h1>
   
 </header>
 
-<span class="time">26 Oct 2019</span>
+<span class="time">30 Jan 2020</span>
 
   <span class="categories">
-    &raquo; <a href="/category/python">python</a>
+    &raquo; <a href="/category/security">security</a>
   </span>
 
 
 <div class="content">
-  <div class="post"><p>Libraries on my watch list! This is page is under construction</p>
+  <div class="post"><hr />
+<h3 id="introduction">Introduction</h3>
+<hr />
 
-<ul>
-  <li>Numpy</li>
-  <li>Pandas</li>
-  <li>tensorflow</li>
-  <li>keras</li>
-  <li>sklearn</li>
-  <li>scipy</li>
-  <li>matplotlib</li>
-  <li>plotly_express <a href="https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&amp;utm_medium=social_link&amp;utm_source=missinglettr-twitter">Ref</a></li>
-  <li>Streamlit - For web app of ml model <a href="https://streamlit.io/docs/">Ref</a></li>
-  <li>snyk - For VA of packages</li>
-  <li>megaman - For scalable manifold learning <a href="https://github.com/mmp2/megaman">Ref</a></li>
-  <li>modin - For speeding up pandas</li>
-</ul>
+<p>In this blog, we will see how to set up the cuckoo sandbox and virtual box for malware analysis. It is assumed that the host machine is installed with Ubuntu 18+ with VirtualBox software.</p>
 
-<p>All packages are being managed using <code class="language-plaintext highlighter-rouge">pip</code></p>
+<hr />
+<h3 id="pre-requisites">Pre-requisites</h3>
+<hr />
 
-<p>This post is not final and will be incrementally updated.</p>
-
-<p>Sample highligting of code.</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="c1"># This is a sample python code.</span></code></pre></figure>
-
+<hr />
+<h3 id="references">References:</h3>
+<hr />
 </div>
   
   <div class="share-page">
@@ -194,7 +179,7 @@
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/python/2019/10/26/Python.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -221,68 +206,26 @@
       
         
           
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
             
             <div class="panel-body">
               <h4>Related Posts</h4>
               <ul>
             
                 <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
+                  <a href="http://localhost:4000/security/2020/01/22/passive-reconnaissance.html">Passive OSINT tools for beginners</a>
                   
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
-      
-    
-        
-          
-      
-    
-  
-    
-      
-        
-          
-      
-    
-  
-    
-      
-        
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/bash">bash</a>)
-                  
-                </li>
-          
-          
-        
-      
-    
-        
-          
-      
-    
-  
-    
-      
-        
-          
-      
-    
-        
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html">Realtime 3D plot using matplotlib library</a>
-                  
-                    (Categories: <a href="/category/DataViz">DataViz</a>, <a href="/category/python">python</a>)
+                    (Categories: <a href="/category/security">security</a>)
                   
                 </li>
           
@@ -297,21 +240,15 @@
           
       
     
+        
+          
+      
+    
   
     
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html">Introduction to dynamic realtime plotting with Plotly/Dash</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/DataViz">DataViz</a>)
-                  
-                </li>
-          
-          
-        
       
     
         
@@ -325,14 +262,21 @@
           
             
                 <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network</a>
+                  <a href="http://localhost:4000/security/2020/01/15/malware-intro.html">Gentle Introduction to Malicious Software or Malware</a>
                   
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                    (Categories: <a href="/category/security">security</a>)
                   
                 </li>
           
           
         
+      
+    
+  
+    
+      
+        
+          
       
     
         
@@ -344,16 +288,17 @@
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2019/12/25/CNN.html">Convolutional Neural Network using PyTorch</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
+      
+    
         
+          
+      
+    
+  
+    
+      
+        
+          
       
     
         
@@ -382,8 +327,8 @@
 
 <div class="PageNavigation">
   
+    <a class="prev" href="/python/ml/2020/01/26/transfer-learning.html">&laquo; Maximising accuracy with limited training data using Transfer Learning </a>
   
-    <a class="next" href="/python/2019/10/27/Install-Python-copy.html">Install python3.6+ for local user on remote machine without root access &raquo;</a>
   
 </div>
 
@@ -392,8 +337,8 @@
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Python packages I keep a watch on";
-    var disqus_title = "Python packages I keep a watch on";
+    var disqus_identifier = "http://localhost:4000_Setting up Cuckoo Sandbox and VM for Malware Analysis";
+    var disqus_title = "Setting up Cuckoo Sandbox and VM for Malware Analysis";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

@@ -5,9 +5,34 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jan 2020 23:16:41 +0530</pubDate>
-    <lastBuildDate>Sun, 26 Jan 2020 23:16:41 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Feb 2020 06:29:00 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Feb 2020 06:29:00 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Setting up Cuckoo Sandbox and VM for Malware Analysis</title>
+        <description>&lt;hr /&gt;
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;In this blog, we will see how to set up the cuckoo sandbox and virtual box for malware analysis. It is assumed that the host machine is installed with Ubuntu 18+ with VirtualBox software.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;pre-requisites&quot;&gt;Pre-requisites&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html</link>
+        <guid isPermaLink="true">http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html</guid>
+        
+        
+        <category>security</category>
+        
+      </item>
     
       <item>
         <title>Maximising accuracy with limited training data using Transfer Learning </title>
@@ -622,46 +647,6 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         <pubDate>Sun, 27 Oct 2019 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/python/2019/10/27/Install-Python-copy.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/2019/10/27/Install-Python-copy.html</guid>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Python packages I keep a watch on</title>
-        <description>&lt;p&gt;Libraries on my watch list! This is page is under construction&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Numpy&lt;/li&gt;
-  &lt;li&gt;Pandas&lt;/li&gt;
-  &lt;li&gt;tensorflow&lt;/li&gt;
-  &lt;li&gt;keras&lt;/li&gt;
-  &lt;li&gt;sklearn&lt;/li&gt;
-  &lt;li&gt;scipy&lt;/li&gt;
-  &lt;li&gt;matplotlib&lt;/li&gt;
-  &lt;li&gt;plotly_express &lt;a href=&quot;https://mlwhiz.com/blog/2019/05/05/plotly_express/?utm_campaign=pythons-one-liner-graph-creation-library-with-animations-hans-rosling-style&amp;amp;utm_medium=social_link&amp;amp;utm_source=missinglettr-twitter&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Streamlit - For web app of ml model &lt;a href=&quot;https://streamlit.io/docs/&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;snyk - For VA of packages&lt;/li&gt;
-  &lt;li&gt;megaman - For scalable manifold learning &lt;a href=&quot;https://github.com/mmp2/megaman&quot;&gt;Ref&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;modin - For speeding up pandas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All packages are being managed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This post is not final and will be incrementally updated.&lt;/p&gt;
-
-&lt;p&gt;Sample highligting of code.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# This is a sample python code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Sat, 26 Oct 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/python/2019/10/26/Python.html</link>
-        <guid isPermaLink="true">http://localhost:4000/python/2019/10/26/Python.html</guid>
         
         
         <category>python</category>
