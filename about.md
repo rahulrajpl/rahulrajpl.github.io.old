@@ -7,7 +7,7 @@ permalink: /about/
 
 Hey there,
 
-My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to Computer Science and Engineering. 
+My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to cybersecurity and machine learning.  
 
 ------------
 **Reach me here**
@@ -30,7 +30,7 @@ I have borrowed the hardwork of following people to build this website. Thanks t
 1. [Agusmakmun](https://github.com/agusmakmun)(for the jekyll theme)
 2. [Jeff Donahue](http://jeffdonahue.com/) (for the email unscramble script)
 
-I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.    
+I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.   
 
 ------------
 **Disclaimer**
