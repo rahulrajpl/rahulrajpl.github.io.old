@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Setting up Cuckoo Sandbox and Kioptrix for security hands-on - ~/web/logs</title>
+    <title>Diffusin Map for manifold learning, Theory and Implementation - ~/web/logs</title>
     <meta name="author" content="RandomWalk" />
-    <meta name="description" content="Setting up Cuckoo Sandbox and Kioptrix for security hands-on" />
-    <meta name="keywords" content="Setting up Cuckoo Sandbox and Kioptrix for security hands-on, ~/web/logs, security" />
+    <meta name="description" content="Diffusin Map for manifold learning, Theory and Implementation" />
+    <meta name="keywords" content="Diffusin Map for manifold learning, Theory and Implementation, ~/web/logs, python" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Setting up Cuckoo Sandbox and Kioptrix for security hands-on" property="og:title">
+      <meta content="Diffusin Map for manifold learning, Theory and Implementation" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,7 +25,7 @@
     
 
     
-      <meta content="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html" property="og:url">
+      <meta content="http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html" property="og:url">
     
 
     
@@ -37,7 +37,7 @@
 
     
       
-        <meta content="security" property="article:section">
+        <meta content="python" property="article:section">
       
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Setting up Cuckoo Sandbox and Kioptrix for security hands-on">
+      <meta name="twitter:title" content="Diffusin Map for manifold learning, Theory and Implementation">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html">
+      <meta name="twitter:url" content="http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html">
     
 
     
@@ -79,6 +79,11 @@
 
     
 
+    <!-- for Tex Support (Math expressions)-->
+    <script type="text/javascript" 
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
     <!-- Google Adsense Code starts -->
     <script data-ad-client="ca-pub-2311920175546229" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Google Adsense Code ends -->
@@ -97,8 +102,6 @@
           
           <div class="social">
             <ul>
-              
-                <li><a href="https://www.facebook.com/0192837465raj" target="_blank"><i class="fa fa-facebook"></i></a></li>
               
                 <li><a href="https://twitter.com/rahulrajpl" target="_blank"><i class="fa fa-twitter"></i></a></li>
               
@@ -144,14 +147,14 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Setting up Cuckoo Sandbox and Kioptrix for security hands-on</h1>
+  <h1 class="post-title">Diffusin Map for manifold learning, Theory and Implementation</h1>
   
 </header>
 
 <span class="time">30 Jan 2020</span>
 
   <span class="categories">
-    &raquo; <a href="/category/security">security</a>
+    &raquo; <a href="/category/python">python</a>
   </span>
 
 
@@ -160,105 +163,35 @@
 <h3 id="introduction">Introduction</h3>
 <hr />
 
-<p>In this blog, we will see how to set up the cuckoo sandbox and virtual box for malware analysis. It is assumed that the host machine is installed with Ubuntu 18.04 or above with VirtualBox software.</p>
-
 <hr />
 <h3 id="configuring-cuckoo-sandbox">Configuring Cuckoo Sandbox</h3>
 <hr />
 
-<p>Step 1: Download Cuckoo_setup.zip from Google Drive(<em>Link will be provided on request</em>)<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+<p><strong>Diffusion map for manifold learning</strong></p>
 
-<p>Step 2: “Run cuckoo_framework_install.sh” after unzipping the downloaded file from step 1. Cuckoo will work with python2 at the time of writing this, however, active development for porting the tool to python3 is in progress this year.</p>
-
-<p>Step 3: Step 2 will install a preconfigured Windows operating system to the VirtualBox. A new configuration file will be generated during the installation. Few configuration changes to be done will be after the following step.</p>
-
-<p>Step 4: Open up cuckoo2 in the VM. Check the IP address of the machine by running command ‘ipconfig’ in the cmd prompt. You will see and IP like <strong>192.168.56.10X</strong>. Now go to the Machine tab, click on ‘Take Snapshot’ to save a snapshot of the machine.</p>
-
-<p>Step 5: Final configuration changes to be done for cuckoo sandbox is as follows-</p>
-
-<ul>
-  <li>Go to the path ‘/home/username/.cuckoo’ and find the ‘conf’ folder.</li>
-  <li>You only need to change three configuration files
-namely ‘cuckoo.conf’, ’virtualbox.conf’, and ‘routing.conf’.</li>
-  <li>cuckoo.conf: The fields to be changed in this configuration file are machinery name, resultserver IP, and analysis timeout. The machinery
-name is to be VirtualBox, resultserver ip addresss is to be the ip address
-of the virtual network interface (vboxnet0), and the analysis timeout is
-to be set as 20 seconds instead of 120 seconds.</li>
-  <li>virtualbox.conf: You are using virtualbox as a virtual machine, so you
-need to update the configuration details of virtualbox.conf file. This file
-contains the information about the network interface. In your case, it is
-vboxnet0. The machine name is the same as the virtual machine name.
-In your case, you imported the cuckoo2.ova file to virtualbox. Therefore,
-your machine name will be cuckoo2. Label field is also same as the
-machine name. Cross verify the host machine IP address under ‘platform’ and ‘Cuckoo2’ IP address you have checked while taking snapshot. Ensure the snapshot name is also correctly configured in this file.</li>
-  <li>routing.conf: This file contains the information about the routing. To
-disable the Internet, set the Internet field as none in this configuration file.
-If you want to create some fake Internet services, then set yes in the
-inetsim field. If you are using inetsim, then you need to install the debian
-package of inetsim into your host machine and change the
-DNS_default_IP from the /etc/inetsim/inetsim.conf file. As a beginner,
-we discourage you to do this for now. When we consider malware such
-as bots, you might have to enable this.</li>
-</ul>
-
-<p>This completes the Cuckoo sandbox setup and is ready or malware analysis. Three main steps are</p>
-
-<ul>
-  <li><strong>Cuckoo clean</strong> - this will clean the cuckoo generated reports earlier.(/home/user/.cuckoo/storage/analyses.)</li>
-  <li>**Cuckoo submit <file>** this will add task for <file> analysis</file></file></li>
-  <li><strong>Cuckoo</strong> - this will initialize the automated malware analysis.</li>
-</ul>
-
-<p>A specifically instrumented Windows 8 Operating System for Malware Analysis is available in the google drive. It includes programs such as Strings, upx packer, peid, resource hacker, DependencyWalker, PEView, Process Explorer, ProcMon, IDA Pro, and pstools.</p>
-
-<p><strong>Warning</strong>: The VM should be configured for ‘host-only’ network or, it may harm the host machine.</p>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*} %]]></script>
 
 <hr />
 <h3 id="configuring-kioptrix-for-pentesting-practice">Configuring Kioptrix for Pentesting practice</h3>
 <hr />
-<p>Step 1: Download Kioptrix level 1 from this <a href="https://www.vulnhub.com/entry/kioptrix-level-1-1,22/">link</a></p>
-
-<p>Step 2: You will see a vmdk file when the download finishes. Since we are using virtualbox we need to setup vmdk on virtualbox.</p>
-
-<p>Step 3: Following steps are needed for the linking of vmdk with virtualbox<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
-
-<ul>
-  <li>Open VirtualBox and create a new virtual machine, or open an existing one.</li>
-  <li>Click the “Settings” button.</li>
-  <li>Click “Storage.”</li>
-  <li>Click “SATA Controller.”</li>
-  <li>Click “Add Hard Disk.”</li>
-  <li>Navigate to and double-click on the VDMK file.</li>
-  <li>Click “OK” to save the setting.</li>
-  <li>Click the green “Start” icon to open the VMDK file and boot the virtual machine.</li>
-</ul>
-
-<p>By default, if you boot the kioptrix from virtualbox, it will most likely end up in a ‘kernel panic’. Some more configurations are required before we get to handson with kioptrix boot-to-root VMs. Follows steps:<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
-
-<ul>
-  <li>Create a new VM and choose not to use a disk</li>
-  <li>In “Settings -&gt; Storage”, remove the SATA controller entirely and under the IDE controller add an new (existing) disk - and select the VMDK.</li>
-  <li>Under “Settings -&gt; Audio” untick “Enable Audio”</li>
-  <li>Under “Settings -&gt; Network” expand “Advanced” and change the Adaptor Type to “PCnet-PCI II (Am79c970A)”</li>
-  <li>Under “Settings -&gt; Ports -&gt; USB” untick “Enable USB Controller”</li>
-</ul>
 
 <hr />
 <h3 id="references">References:</h3>
 <hr />
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Prof. Sandeep Shukla  and Mr. Nitesh Kumar (C3i center, IIT Kanpur) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>https://smallbusiness.chron.com/open-vmdk-virtualbox-28847.html <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>https://www.hypn.za.net/blog/2017/07/15/running-kioptrix-level-1-and-others-in-virtualbox/ <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 </div>
   
   <div class="share-page">
@@ -269,7 +202,7 @@ as bots, you might have to enable this.</li>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/security/2020/01/30/Setting-up-Cuckoo-Sandbox.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -289,15 +222,82 @@ as bots, you might have to enable this.</li>
       
         
           
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
             
             <div class="panel-body">
               <h4>Related Posts</h4>
               <ul>
             
                 <li class="relatedPost">
-                  <a href="http://localhost:4000/security/2020/02/09/Setting-up-Cuckoo-Sandbox.html">Setting up Cuckoo Sandbox and Kioptrix for security hands-on</a>
+                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
                   
-                    (Categories: <a href="/category/security">security</a>)
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
+          
+          
+        
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/bash">bash</a>)
+                  
+                </li>
+          
+          
+        
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html">Realtime 3D plot using matplotlib library</a>
+                  
+                    (Categories: <a href="/category/DataViz">DataViz</a>, <a href="/category/python">python</a>)
                   
                 </li>
           
@@ -317,6 +317,16 @@ as bots, you might have to enable this.</li>
       
         
           
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html">Introduction to dynamic realtime plotting with Plotly/Dash</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/DataViz">DataViz</a>)
+                  
+                </li>
+          
+          
+        
       
     
         
@@ -330,32 +340,14 @@ as bots, you might have to enable this.</li>
           
             
                 <li class="relatedPost">
-                  <a href="http://localhost:4000/security/2020/01/22/passive-reconnaissance.html">Passive OSINT tools for beginners</a>
+                  <a href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network</a>
                   
-                    (Categories: <a href="/category/security">security</a>)
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
                   
                 </li>
           
           
         
-      
-    
-  
-    
-      
-        
-          
-      
-    
-        
-          
-      
-    
-  
-    
-      
-        
-          
       
     
         
@@ -369,43 +361,14 @@ as bots, you might have to enable this.</li>
           
             
                 <li class="relatedPost">
-                  <a href="http://localhost:4000/security/2020/01/15/malware-intro.html">Gentle Introduction to Malicious Software or Malware</a>
+                  <a href="http://localhost:4000/python/ml/2019/12/25/CNN.html">Convolutional Neural Network using PyTorch</a>
                   
-                    (Categories: <a href="/category/security">security</a>)
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
                   
                 </li>
           
           
         
-      
-    
-  
-    
-      
-        
-          
-      
-    
-        
-          
-      
-    
-  
-    
-      
-        
-          
-      
-    
-        
-          
-      
-    
-  
-    
-      
-        
-          
       
     
         
@@ -446,8 +409,8 @@ as bots, you might have to enable this.</li>
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Setting up Cuckoo Sandbox and Kioptrix for security hands-on";
-    var disqus_title = "Setting up Cuckoo Sandbox and Kioptrix for security hands-on";
+    var disqus_identifier = "http://localhost:4000_Diffusin Map for manifold learning, Theory and Implementation";
+    var disqus_title = "Diffusin Map for manifold learning, Theory and Implementation";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

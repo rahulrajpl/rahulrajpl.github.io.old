@@ -15,8 +15,8 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-facebook
-      link: "https://www.facebook.com/0192837465raj"
+    #- icon: fa-facebook
+    #  link: "https://www.facebook.com/0192837465raj"
     - icon: fa-twitter
       link: "https://twitter.com/rahulrajpl"
     - icon: fa-linkedin

@@ -3,8 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-![--](static/img/prof1.jpg)
-
 Hey there,
 
 My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to cybersecurity and machine learning.  
