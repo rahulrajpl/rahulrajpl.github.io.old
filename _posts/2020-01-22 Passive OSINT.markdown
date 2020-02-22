@@ -5,6 +5,8 @@ categories: [security]
 comments: true
 ---
 
+
+
 -----------------------
 ### Introduction
 -----------------------
@@ -75,8 +77,18 @@ Data pulled by this tool is similar to what wappalyzer and builtwith can do.
 
 This is a tool I wrote to find out if a given username is already registered with popular websites or not. Project is open-sourced [here](https://github.com/rahulrajpl/netizenship)
 
+update: 19 Feb 2020 - (Added more tools)
+
+**Maltego**
+A very powerful tool which is packaged with kali Linux for passive int. Community Edition, which is free, has just enough features to get started. Explore the tool by searching maltigo in Kali main menu.
+
+**Spiderfoot**
+
+**Buscador Investigative OS**
+
 -----------------------
 ### References:
 -----------------------
 [^1]: Ethical Hacking course by @thecybermentor
 [^2]: Penetration Testing and Ethical Hacking course by *Cybrary*
+[^3]: Ethical Hacking Bootcamp by Omar Santoos on OReilly
