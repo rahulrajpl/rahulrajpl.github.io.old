@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Feb 2020 11:05:51 +0530</pubDate>
-    <lastBuildDate>Wed, 26 Feb 2020 11:05:51 +0530</lastBuildDate>
+    <pubDate>Sun, 08 Mar 2020 01:57:50 +0530</pubDate>
+    <lastBuildDate>Sun, 08 Mar 2020 01:57:50 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -166,6 +166,58 @@ as bots, you might have to enable this.&lt;/li&gt;
         
         
         <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>Diffusion Map for manifold learning, Theory and Implementation</title>
+        <description>&lt;hr /&gt;
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;‘Curse of dimensionality’ is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high[^fn1]. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.&lt;/p&gt;
+
+&lt;p&gt;The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself. Following figure depicts the reason for the same. Similarity measured in Figure C makes more sense that the one measure in Figure C, which is the classic ‘Euclidean distance’ way.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;static/img/Diffusion_Map/original_figA.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;configuring-cuckoo-sandbox&quot;&gt;Configuring Cuckoo Sandbox&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Diffusion map for manifold learning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;configuring-kioptrix-for-pentesting-practice&quot;&gt;Configuring Kioptrix for Pentesting practice&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html</guid>
+        
+        
+        <category>python</category>
+        
+        <category>ML</category>
         
       </item>
     
@@ -702,30 +754,6 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         <pubDate>Fri, 03 Jan 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html</guid>
-        
-        
-        <category>python</category>
-        
-        <category>ML</category>
-        
-      </item>
-    
-      <item>
-        <title>Convolutional Neural Network using PyTorch</title>
-        <description>&lt;p&gt;Convolutional Neural Network using PyTorch.&lt;/p&gt;
-
-&lt;p&gt;Notebook can be accessed here: &lt;a href=&quot;https://colab.research.google.com/drive/1BUUQvPNBbjJNiXeMWNDquxZRYZsGSjEU&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Credits:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PyTorch for Deep Learning and Computer Vision
-
-Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Wed, 25 Dec 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/python/ml/2019/12/25/CNN.html</link>
-        <guid isPermaLink="true">http://localhost:4000/python/ml/2019/12/25/CNN.html</guid>
         
         
         <category>python</category>

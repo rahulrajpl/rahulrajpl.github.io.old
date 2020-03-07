@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Packaging and shipping your python tools using Poetry - ~/web/logs</title>
+    <title>Diffusion Map for manifold learning, Theory and Implementation - ~/web/logs</title>
     <meta name="author" content="RandomWalk" />
-    <meta name="description" content="Packaging and shipping your python tools using Poetry" />
-    <meta name="keywords" content="Packaging and shipping your python tools using Poetry, ~/web/logs, python, bash" />
+    <meta name="description" content="Diffusion Map for manifold learning, Theory and Implementation" />
+    <meta name="keywords" content="Diffusion Map for manifold learning, Theory and Implementation, ~/web/logs, python, ML" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="0192837465raj" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Packaging and shipping your python tools using Poetry" property="og:title">
+      <meta content="Diffusion Map for manifold learning, Theory and Implementation" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,11 +25,11 @@
     
 
     
-      <meta content="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html" property="og:url">
+      <meta content="http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html" property="og:url">
     
 
     
-      <meta content="2020-01-19T00:00:00+05:30" property="article:published_time">
+      <meta content="2020-01-30T00:00:00+05:30" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rahulrajpl">
 
     
-      <meta name="twitter:title" content="Packaging and shipping your python tools using Poetry">
+      <meta name="twitter:title" content="Diffusion Map for manifold learning, Theory and Implementation">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">
+      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html">
     
 
     
@@ -147,127 +147,56 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Packaging and shipping your python tools using Poetry</h1>
+  <h1 class="post-title">Diffusion Map for manifold learning, Theory and Implementation</h1>
   
 </header>
 
-<span class="time">19 Jan 2020</span>
+<span class="time">30 Jan 2020</span>
 
   <span class="categories">
-    &raquo; <a href="/category/python">python</a>, <a href="/category/bash">bash</a>
+    &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
   </span>
 
 
 <div class="content">
-  <div class="post"><p>In this blog let’s see how we can package an application and distrubute it using tool called <strong>poetry</strong>.<sup id="fnref:3"><a href="#fn:3" class="footnote">1</a></sup></p>
+  <div class="post"><hr />
+<h3 id="introduction">Introduction</h3>
+<hr />
+<p>‘Curse of dimensionality’ is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high[^fn1]. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.</p>
+
+<p>The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself. Following figure depicts the reason for the same. Similarity measured in Figure C makes more sense that the one measure in Figure C, which is the classic ‘Euclidean distance’ way.</p>
+
+<p><img src="static/img/Diffusion_Map/original_figA.png" alt="alt" /></p>
 
 <hr />
-<h3 id="step-1-download-and-install-poetry">Step 1. Download and Install Poetry</h3>
+<h3 id="configuring-cuckoo-sandbox">Configuring Cuckoo Sandbox</h3>
 <hr />
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-sSL</span> https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-<span class="nv">$ </span><span class="nb">source</span> <span class="nv">$HOME</span>/.poetry/env
-</code></pre></div></div>
-<p>Check the installation correctly by executing</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry <span class="nt">--version</span>
-</code></pre></div></div>
+<p><strong>Diffusion map for manifold learning</strong></p>
 
-<p>If this throws and error regarding ‘threads’ like the one below</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rahul@rahul-lap:~<span class="nv">$ </span>poetry <span class="nt">--version</span>
-/home/rahul/.poetry/lib/poetry/_vendor/py2.7/subprocess32.py:149: RuntimeWarning: The _posixsubprocess module is not being used. Child process reliability may suffer <span class="k">if </span>your program uses threads.
-  <span class="s2">"program uses threads."</span>, RuntimeWarning<span class="o">)</span>
-Poetry version 1.0.2
-</code></pre></div></div>
-<p>, you might need to change the first line in configuration <code class="language-plaintext highlighter-rouge">~/.poetry/bin/poetry</code> from <code class="language-plaintext highlighter-rouge">#!/usr/bin/env python</code> to <code class="language-plaintext highlighter-rouge">#!/usr/bin/env python3</code>. Save this file and execute <code class="language-plaintext highlighter-rouge">poetry --version</code> again to check for errors if any.</p>
-
-<hr />
-<h3 id="step-2-packaging">Step 2. Packaging</h3>
-<hr />
-
-<p>If you have a simple script written in python, something similar following ‘demo-tool’</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="k">print</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-	<span class="n">main</span><span class="p">()</span>
-</code></pre></div></div>
-<p>, you have to go the project directory, open up the terminal and execute, <code class="language-plaintext highlighter-rouge">poetry init</code>. This command will guide you to create the most important file called <code class="language-plaintext highlighter-rouge">pyproject.toml</code>, which will orchestrate the packaging for you. Once the interactive generation is finishied, this file will look like below</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>tool.poetry]
-name <span class="o">=</span> <span class="s2">"demo-tool"</span>
-version <span class="o">=</span> <span class="s2">"0.1.0"</span>
-description <span class="o">=</span> <span class="s2">"a demo tool for printing hello world"</span>
-authors <span class="o">=</span> <span class="o">[</span><span class="s2">"Your Name &lt;you@example.com&gt;"</span><span class="o">]</span>
-license <span class="o">=</span> <span class="s2">"MIT"</span>
-
-<span class="o">[</span>tool.poetry.dependencies]
-python <span class="o">=</span> <span class="s2">"^3.7"</span>
-
-<span class="o">[</span>tool.poetry.dev-dependencies]
-
-<span class="o">[</span>build-system]
-requires <span class="o">=</span> <span class="o">[</span><span class="s2">"poetry&gt;=0.12"</span><span class="o">]</span>
-build-backend <span class="o">=</span> <span class="s2">"poetry.masonry.api"</span>
-
-</code></pre></div></div>
-<p>You can add an entry point to the file using ‘console_script’ in poetry way. Following lines to be appended to our demo program.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>tool.poetry.scripts]
-demo-tool <span class="o">=</span> <span class="s1">'demo-tool:main'</span>
-</code></pre></div></div>
-<p>In case your program has some dependecy, you can add it via <code class="language-plaintext highlighter-rouge">poetry add &lt;package-name&gt;</code>. For example, if your program depends on beautifulsoup webscrapping library, you have to add this dependency to the toml file by running the command <code class="language-plaintext highlighter-rouge">poetry add beautifulsoup4</code></p>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*} %]]></script>
 
 <hr />
-<h3 id="step-3-distributing">Step 3. Distributing</h3>
+<h3 id="configuring-kioptrix-for-pentesting-practice">Configuring Kioptrix for Pentesting practice</h3>
 <hr />
-
-<p>Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool <code class="language-plaintext highlighter-rouge">pip</code> <sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>
-Run the following command to publish your package</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry build
-</code></pre></div></div>
-
-<p>Then publish it(Here you have to enter your pyPI credentials)</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>peotry publish
-</code></pre></div></div>
-
-<p>Or you can do it with single command as below</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry publish <span class="nt">--username</span> &lt;YOUR-USERNAME&gt; <span class="nt">--password</span> &lt;YOUR-PASSWORD&gt; <span class="nt">--build</span>
-</code></pre></div></div>
-
-<p>If you do not have an account in PyPI, go to <a href="https://pypi.org">pypi.org</a> and create and account.</p>
-
-<p>Now that your tool is available to outside world to use.</p>
-
-<hr />
-<h3 id="step-4-installation-and-usage">Step 4. Installation and Usage</h3>
-<hr />
-
-<p>Now anyone can install this tool by running,</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pip3 <span class="nb">install </span>demo-tool
-</code></pre></div></div>
-<p>This will create a system-wide availability of the command ‘demo-tool’ and can be run by simply executing <code class="language-plaintext highlighter-rouge">demo-tool</code> anywhere from the system.</p>
-
-<p>If you want to locally install it, create a virtual environment using <code class="language-plaintext highlighter-rouge">virtualenv venv</code> and activate it using <code class="language-plaintext highlighter-rouge">source /venv/bin/activate</code> and then run <code class="language-plaintext highlighter-rouge">pip install demo-tool</code>. This will be available locally only to this virtual environment.<sup id="fnref:1"><a href="#fn:1" class="footnote">3</a></sup></p>
 
 <hr />
 <h3 id="references">References:</h3>
 <hr />
-<div class="footnotes">
-  <ol>
-    <li id="fn:3">
-      <p>https://python-poetry.org/ <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>https://pypi.org/ <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:1">
-      <p>https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 </div>
   
   <div class="share-page">
@@ -278,7 +207,7 @@ Run the following command to publish your package</p>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -330,16 +259,6 @@ Run the following command to publish your package</p>
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html">Diffusion Map for manifold learning, Theory and Implementation</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
       
           
       
@@ -389,6 +308,16 @@ Run the following command to publish your package</p>
       
         
           
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/bash">bash</a>)
+                  
+                </li>
+          
+          
+        
       
           
       
@@ -524,10 +453,10 @@ Run the following command to publish your package</p>
 
 <div class="PageNavigation">
   
-    <a class="prev" href="/dataviz/python/2020/01/16/Realtime-3D-plot.html">&laquo; Realtime 3D plot using matplotlib library</a>
+    <a class="prev" href="/python/ml/2020/01/26/transfer-learning.html">&laquo; Maximising accuracy with limited training data using Transfer Learning </a>
   
   
-    <a class="next" href="/security/2020/01/22/passive-reconnaissance.html">Passive OSINT tools for beginners &raquo;</a>
+    <a class="next" href="/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html">Diffusin Map for manifold learning, Theory and Implementation &raquo;</a>
   
 </div>
 
@@ -536,8 +465,8 @@ Run the following command to publish your package</p>
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Packaging and shipping your python tools using Poetry";
-    var disqus_title = "Packaging and shipping your python tools using Poetry";
+    var disqus_identifier = "http://localhost:4000_Diffusion Map for manifold learning, Theory and Implementation";
+    var disqus_title = "Diffusion Map for manifold learning, Theory and Implementation";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
