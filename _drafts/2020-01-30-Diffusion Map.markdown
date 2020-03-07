@@ -8,11 +8,25 @@ comments: true
 -----------------------
 ### Introduction
 -----------------------
-'Curse of dimensionality' is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high[^fn1]. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.
+'Curse of dimensionality' is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high [^1]. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.
 
-The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only 'locally'. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself. Following figure depicts the reason for the same. Similarity measured in Figure C makes more sense that the one measure in Figure C, which is the classic 'Euclidean distance' way. 
+The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only 'locally'. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself. 
 
-![alt](static/img/Diffusion_Map/original_figA.png)
+
+Following figure depicts the reason for the same. Similarity measured in between point A and point B makes more sense if it is done through the geometric structure of the data.  
+
+<p align="center">
+  <img width="300" height="300" src="https://user-images.githubusercontent.com/279503/76152157-2eaa2780-60e2-11ea-8024-e9b11f96c28f.png">
+<br><em align="center">Figure 1: Euclidean Distance meausured in</br> co-ordinate space</em>
+</p>
+
+<p align="center">
+  <img width="300" height="300" src="https://user-images.githubusercontent.com/279503/76152158-310c8180-60e2-11ea-8bbc-ec6a60c084d1.png">
+<br><em align="center">Figure 2: Euclidean Distance meausured through</br> manifolds</em>
+</p>
+
+Because, the typical Euclidean Distance seems less and we tend to assume that the points are similar, while the actual distance through its geometric structure or manifold reveals that the distance is infact larger, and points are dissimilar. This is a typical toy example to demonstrate the importance of finding the underlying geometry.
+
 
 -----------------------
 ### Configuring Cuckoo Sandbox
@@ -47,6 +61,5 @@ $$
 -----------------------
 ### References:
 -----------------------
-[^1]: Prof. Sandeep Shukla  and Mr. Nitesh Kumar (C3i center, IIT Kanpur)
-[^2]: https://smallbusiness.chron.com/open-vmdk-virtualbox-28847.html
-[^3]: https://www.hypn.za.net/blog/2017/07/15/running-kioptrix-level-1-and-others-in-virtualbox/
+[^1]: Manifold Learning methods in Scikit-Learn (https://scikit-learn.org/stable/modules/manifold.html)
+

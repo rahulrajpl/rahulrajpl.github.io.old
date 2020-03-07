@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Mar 2020 01:57:50 +0530</pubDate>
-    <lastBuildDate>Sun, 08 Mar 2020 01:57:50 +0530</lastBuildDate>
+    <pubDate>Sun, 08 Mar 2020 02:41:08 +0530</pubDate>
+    <lastBuildDate>Sun, 08 Mar 2020 02:41:08 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -174,11 +174,23 @@ as bots, you might have to enable this.&lt;/li&gt;
         <description>&lt;hr /&gt;
 &lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;‘Curse of dimensionality’ is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high[^fn1]. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.&lt;/p&gt;
+&lt;p&gt;‘Curse of dimensionality’ is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.&lt;/p&gt;
 
-&lt;p&gt;The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself. Following figure depicts the reason for the same. Similarity measured in Figure C makes more sense that the one measure in Figure C, which is the classic ‘Euclidean distance’ way.&lt;/p&gt;
+&lt;p&gt;The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;static/img/Diffusion_Map/original_figA.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Following figure depicts the reason for the same. Similarity measured in between point A and point B makes more sense if it is done through the geometric structure of the data.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;https://user-images.githubusercontent.com/279503/76152157-2eaa2780-60e2-11ea-8024-e9b11f96c28f.png&quot; /&gt;
+&lt;br /&gt;&lt;em align=&quot;center&quot;&gt;Figure 1: Euclidean Distance meausured in&amp;lt;/br&amp;gt; co-ordinate space&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;https://user-images.githubusercontent.com/279503/76152158-310c8180-60e2-11ea-8bbc-ec6a60c084d1.png&quot; /&gt;
+&lt;br /&gt;&lt;em align=&quot;center&quot;&gt;Figure 2: Euclidean Distance meausured through&amp;lt;/br&amp;gt; manifolds&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Because, the typical Euclidean Distance seems less and we tend to assume that the points are similar, while the actual distance through its geometric structure or manifold reveals that the distance is infact larger, and points are dissimilar. This is a typical toy example to demonstrate the importance of finding the underlying geometry.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h3 id=&quot;configuring-cuckoo-sandbox&quot;&gt;Configuring Cuckoo Sandbox&lt;/h3&gt;
@@ -209,6 +221,14 @@ as bots, you might have to enable this.&lt;/li&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 &lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Manifold Learning methods in Scikit-Learn (https://scikit-learn.org/stable/modules/manifold.html) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Thu, 30 Jan 2020 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html</link>
