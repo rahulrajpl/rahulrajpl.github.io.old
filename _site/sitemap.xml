@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Mar 2020 02:41:08 +0530</pubDate>
-    <lastBuildDate>Sun, 08 Mar 2020 02:41:08 +0530</lastBuildDate>
+    <pubDate>Sun, 08 Mar 2020 08:52:14 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Mar 2020 08:52:14 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -115,7 +115,7 @@ as bots, you might have to enable this.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sun, 09 Feb 2020 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/security/2020/02/09/Setting-up-Cuckoo-Sandbox.html</link>
         <guid isPermaLink="true">http://localhost:4000/security/2020/02/09/Setting-up-Cuckoo-Sandbox.html</guid>
         
@@ -160,7 +160,7 @@ as bots, you might have to enable this.&lt;/li&gt;
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 &lt;hr /&gt;
 </description>
-        <pubDate>Thu, 30 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html</guid>
         
@@ -180,8 +180,10 @@ as bots, you might have to enable this.&lt;/li&gt;
 
 &lt;p&gt;Following figure depicts the reason for the same. Similarity measured in between point A and point B makes more sense if it is done through the geometric structure of the data.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;static/img/Diffusion_Map/original_figB.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
 &lt;p align=&quot;center&quot;&gt;
-  &lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;https://user-images.githubusercontent.com/279503/76152157-2eaa2780-60e2-11ea-8024-e9b11f96c28f.png&quot; /&gt;
+&lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;static/img/&quot; /&gt;
 &lt;br /&gt;&lt;em align=&quot;center&quot;&gt;Figure 1: Euclidean Distance meausured in&amp;lt;/br&amp;gt; co-ordinate space&lt;/em&gt;
 &lt;/p&gt;
 
@@ -230,7 +232,7 @@ as bots, you might have to enable this.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Thu, 30 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/ml/2020/01/30/Diffusion-Map.html</guid>
         
@@ -268,7 +270,7 @@ as bots, you might have to enable this.&lt;/li&gt;
 &lt;hr /&gt;
 &lt;p&gt;This lesson is part of tutorial, ‘Pytorch for Deep Learning and Computer Vision’ by Rayan Slim, Jad Slim, Amer Sharaf and Sarmad Tanveer. It is available in learning.oreilly.com&lt;/p&gt;
 </description>
-        <pubDate>Sun, 26 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/ml/2020/01/26/transfer-learning.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/ml/2020/01/26/transfer-learning.html</guid>
         
@@ -365,7 +367,7 @@ as bots, you might have to enable this.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Wed, 22 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/security/2020/01/22/passive-reconnaissance.html</link>
         <guid isPermaLink="true">http://localhost:4000/security/2020/01/22/passive-reconnaissance.html</guid>
         
@@ -486,7 +488,7 @@ Run the following command to publish your package&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sun, 19 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html</guid>
         
@@ -590,7 +592,7 @@ Run the following command to publish your package&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Thu, 16 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html</link>
         <guid isPermaLink="true">http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html</guid>
         
@@ -700,7 +702,7 @@ eyJoaXN0b3J5IjpbMzA0MDczNTU0XX0=
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Wed, 15 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/security/2020/01/15/malware-intro.html</link>
         <guid isPermaLink="true">http://localhost:4000/security/2020/01/15/malware-intro.html</guid>
         
@@ -734,7 +736,7 @@ eyJoaXN0b3J5IjpbMzA0MDczNTU0XX0=
 [2] https://pythonprogramming.net/live-graphs-data-visualization-application-dash-python-tutorial/ (via @Sentdex )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Mon, 06 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html</guid>
         
@@ -771,7 +773,7 @@ eyJoaXN0b3J5IjpbMzA0MDczNTU0XX0=
 Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Fri, 03 Jan 2020 00:00:00 +0530</pubDate>
+        <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html</guid>
         
@@ -795,7 +797,7 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Wed, 25 Dec 2019 00:00:00 +0530</pubDate>
+        <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/ml/2019/12/25/CNN.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/ml/2019/12/25/CNN.html</guid>
         
@@ -851,7 +853,7 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;$ python -m pip install &amp;lt;package-name&amp;gt; --user&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Sun, 27 Oct 2019 00:00:00 +0530</pubDate>
+        <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/2019/10/27/Install-Python-copy.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/2019/10/27/Install-Python-copy.html</guid>
         
@@ -891,7 +893,7 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
 &lt;span class=&quot;c1&quot;&gt;# This is a sample python code.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Sat, 26 Oct 2019 00:00:00 +0530</pubDate>
+        <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/python/2019/10/26/Python.html</link>
         <guid isPermaLink="true">http://localhost:4000/python/2019/10/26/Python.html</guid>
         

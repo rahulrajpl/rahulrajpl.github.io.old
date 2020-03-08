@@ -18,8 +18,10 @@ The key to all manifold learning method is the realisation that Euclidean Distan
 
 Following figure depicts the reason for the same. Similarity measured in between point A and point B makes more sense if it is done through the geometric structure of the data.  
 
+![alt](static/img/Diffusion_Map/original_figB.png)
+
 <p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/279503/76152157-2eaa2780-60e2-11ea-8024-e9b11f96c28f.png">
+<img width="300" height="300" src="static/img/">
 <br><em align="center">Figure 1: Euclidean Distance meausured in</br> co-ordinate space</em>
 </p>
 
@@ -27,6 +29,10 @@ Following figure depicts the reason for the same. Similarity measured in between
   <img width="300" height="300" src="https://user-images.githubusercontent.com/279503/76152158-310c8180-60e2-11ea-8bbc-ec6a60c084d1.png">
 <br><em align="center">Figure 2: Euclidean Distance meausured through</br> manifolds</em>
 </p>
+
+
+
+
 
 Because, the typical Euclidean Distance seems less and we tend to assume that the points are similar, while the actual distance through its geometric structure or manifold reveals that the distance is infact larger, and points are dissimilar. This is a typical toy example to demonstrate the importance of finding the underlying geometry.
 
