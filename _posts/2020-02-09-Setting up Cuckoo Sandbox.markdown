@@ -1,7 +1,9 @@
 ---
+title: Setting up Cuckoo Sandbox and Kioptrix for security hands-on
+date: 2020-02-09 00:00:00 Z
+categories:
+- security
 layout: post
-title:  "Setting up Cuckoo Sandbox and Kioptrix for security hands-on"
-categories: [security]
 comments: true
 ---
 

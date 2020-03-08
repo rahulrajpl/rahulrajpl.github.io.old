@@ -1,58 +1,61 @@
-title: ~/web/logs
+---
+title: "~/web/logs"
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  project:
+    title: Project
+    output: true
+    permalink: "/project/:path/"
+  uploads:
+    title: Uploads
+    output: true
 description: Personal website, blogs and other updates
 author: RandomWalk
 github: https://github.com/rahulrajpl
 about: Hello, there!
 disqus_shortname: randomwalk-in
 google_analytics: UA-146669700-1
-
 enableTags: true
 tagarray: []
-
-collections:
-  project:
-    output: true
-    permalink: /project/:path/
-
 social:
-    #- icon: fa-facebook
-    #  link: "https://www.facebook.com/0192837465raj"
-    - icon: fa-twitter
-      link: "https://twitter.com/rahulrajpl"
-    - icon: fa-linkedin
-      link: "https://www.linkedin.com/in/rahul-r-909409184/"
-    - icon: fa-stack-exchange
-      link: "https://askubuntu.com/users/1004462/rahul-raj"
-    - icon: fa-github
-      link: "https://github.com/rahulrajpl"
-
+- icon: fa-twitter
+  link: https://twitter.com/rahulrajpl
+- icon: fa-linkedin
+  link: https://www.linkedin.com/in/rahul-r-909409184/
+- icon: fa-stack-exchange
+  link: https://askubuntu.com/users/1004462/rahul-raj
+- icon: fa-github
+  link: https://github.com/rahulrajpl
 share:
   twitter_username: rahulrajpl
-  fb_appid: 0192837465raj
-
-urls: 
-    - text: Categories
-      url: /category/python   
-    - text: Projects
-      url: /projects/
-    - text: About
-      url: /about/
-    - text: XML Feed
-      url: /feed.xml
-
-url: "https://randomwalk.in"
-baseurl: ""
+  fb_appid: '0192837465raj'
+urls:
+- text: Categories
+  url: "/category/python"
+- text: Projects
+  url: "/projects/"
+- text: About
+  url: "/about/"
+- text: XML Feed
+  url: "/feed.xml"
+url: https://randomwalk.in
+baseurl: ''
 paginate: 20
 per_page: 20
 paginate_path: "/page/:num/"
 markdown: kramdown
 gems:
-  - jekyll-paginate
-  - jekyll-gist
-
+- jekyll-paginate
+- jekyll-gist
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments:
+  - "<!-- "
+  - " -->"
   endings: all
   ignore:
-    envs: ['development']
+    envs:
+    - development

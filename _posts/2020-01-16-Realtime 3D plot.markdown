@@ -1,11 +1,12 @@
 ---
+title: Realtime 3D plot using matplotlib library
+date: 2020-01-16 00:00:00 Z
+categories:
+- DataViz
+- python
 layout: post
-title:  "Realtime 3D plot using matplotlib library"
-categories: [DataViz, python]
 comments: true
 ---
-
-
 
 Following code is used to simulate the real-time sensor data.[^1]
 

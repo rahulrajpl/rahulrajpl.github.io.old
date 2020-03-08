@@ -1,8 +1,9 @@
 ---
-layout: page
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: page
 ---
+
 Hey there,
 
 My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to cybersecurity and machine learning. For one to one conversation, please use my public key [here](/static/base.txt).  

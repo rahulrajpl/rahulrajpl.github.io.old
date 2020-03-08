@@ -1,8 +1,8 @@
 ---
+title: Employee feedback system as a DApp on ethereum network
 layout: project_single
-title:  "Employee feedback system as a DApp on ethereum network"
-slug: "ethereum"
 ---
+
 Keeping in mind privacy, transparency, fairness and absolute immunity to bias and manipulation, we have created this Employee feedback system using blockchain technology.
 
 We created a decentralized application using solidity smart contracts of ethereum network and front end designed on django framework.

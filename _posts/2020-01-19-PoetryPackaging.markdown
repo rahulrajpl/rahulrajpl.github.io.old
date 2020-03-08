@@ -1,11 +1,12 @@
 ---
+title: Packaging and shipping your python tools using Poetry
+date: 2020-01-19 00:00:00 Z
+categories:
+- python
+- bash
 layout: post
-title:  "Packaging and shipping your python tools using Poetry"
-categories: [python, bash]
 comments: true
 ---
-
-
 
 In this blog let's see how we can package an application and distrubute it using tool called **poetry**.[^3]
 

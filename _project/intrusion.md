@@ -1,7 +1,6 @@
 ---
+title: Network Intrusion Detector using Machine Learning
 layout: project_single
-title:  "Network Intrusion Detector using Machine Learning"
-slug: "intrusion"
 ---
 
 (*Image is representational*)

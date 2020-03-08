@@ -1,8 +1,8 @@
 ---
+title: RemindMe - Android App for Reminder services
 layout: project_single
-title:  "RemindMe - Android App for Reminder services"
-slug: "remindme"
 ---
+
 Just another experiment to get the feet wet with android development.
 
 One unique feature I have added in this app is the location service which I don't find in any of the reminder apps in play store. 

@@ -1,9 +1,13 @@
 ---
+title: Introduction to dynamic realtime plotting with Plotly/Dash
+date: 2020-01-06 00:00:00 Z
+categories:
+- python
+- DataViz
 layout: post
-title:  "Introduction to dynamic realtime plotting with Plotly/Dash"
-categories: [python, DataViz]
 comments: true
 ---
+
 --DRAFT POST--
 
 ### ObluTrack

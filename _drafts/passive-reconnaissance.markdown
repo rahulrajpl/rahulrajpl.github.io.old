@@ -1,7 +1,9 @@
 ---
+title: Passive OSINT tools for beginners
+date: 2020-01-22 00:00:00 Z
+categories:
+- security
 layout: post
-title:  "Passive OSINT tools for beginners"
-categories: [security]
 comments: true
 ---
 

@@ -1,7 +1,10 @@
 ---
+title: Convolutional Neural Network using PyTorch
+date: 2019-12-25 00:00:00 Z
+categories:
+- python
+- ML
 layout: post
-title:  "Convolutional Neural Network using PyTorch"
-categories: [python, ML]
 comments: true
 ---
 

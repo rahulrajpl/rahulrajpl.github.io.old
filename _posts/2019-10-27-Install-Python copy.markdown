@@ -1,7 +1,9 @@
 ---
+title: Install python3.6+ for local user on remote machine without root access
+date: 2019-10-27 00:00:00 Z
+categories:
+- python
 layout: post
-title:  "Install python3.6+ for local user on remote machine without root access"
-categories: [python]
 comments: true
 ---
 

@@ -1,7 +1,6 @@
 ---
+title: Web Design with Django
 layout: project_single
-title:  "Web Design with Django"
-slug: "django"
 ---
 
 A full-fledged web designing task is done in this project from designing the website from scratch using the Django framework till hosting it in popular free services like 'pythonanywhere.com' and 'heroku.com'.

@@ -1,11 +1,10 @@
 ---
+title: Passive OSINT tools for beginners
 layout: post
-title:  "Passive OSINT tools for beginners"
-categories: [security]
+categories:
+- security
 comments: true
 ---
-
-
 
 -----------------------
 ### Introduction

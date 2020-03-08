@@ -1,7 +1,9 @@
 ---
+title: Diffusin Map for manifold learning, Theory and Implementation
+date: 2020-01-30 00:00:00 Z
+categories:
+- python
 layout: post
-title:  "Diffusin Map for manifold learning, Theory and Implementation"
-categories: [python]
 comments: true
 ---
 

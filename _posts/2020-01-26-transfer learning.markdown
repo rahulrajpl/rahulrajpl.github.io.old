@@ -1,7 +1,10 @@
 ---
+title: 'Maximising accuracy with limited training data using Transfer Learning '
+date: 2020-01-26 00:00:00 Z
+categories:
+- python
+- ML
 layout: post
-title:  "Maximising accuracy with limited training data using Transfer Learning "
-categories: [python, ML]
 comments: true
 ---
 

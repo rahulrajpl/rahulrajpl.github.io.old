@@ -1,7 +1,9 @@
 ---
+title: Python packages I keep a watch on
+date: 2019-10-26 00:00:00 Z
+categories:
+- python
 layout: post
-title:  "Python packages I keep a watch on"
-categories: [python]
 comments: true
 ---
 

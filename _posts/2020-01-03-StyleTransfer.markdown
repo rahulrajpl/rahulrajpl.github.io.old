@@ -1,7 +1,10 @@
 ---
+title: Image Style Transfer using Convolutional Neural Network
+date: 2020-01-03 00:00:00 Z
+categories:
+- python
+- ML
 layout: post
-title:  "Image Style Transfer using Convolutional Neural Network"
-categories: [python, ML]
 comments: true
 ---
 
