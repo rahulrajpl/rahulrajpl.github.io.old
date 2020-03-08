@@ -33,8 +33,6 @@ I have borrowed the hardwork of following people to build this website. Thanks t
 
 2. [Jeff Donahue](http://jeffdonahue.com/) (for the email unscramble script)
 
-3. [Siteleaf ](http://siteleaf.com)(for enabling awesome CMS for this website)
-
 I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.
 
 ---
