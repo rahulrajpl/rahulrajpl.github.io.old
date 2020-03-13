@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Mar 2020 08:52:14 +0000</pubDate>
-    <lastBuildDate>Sun, 08 Mar 2020 08:52:14 +0000</lastBuildDate>
+    <pubDate>Fri, 13 Mar 2020 09:04:28 +0000</pubDate>
+    <lastBuildDate>Fri, 13 Mar 2020 09:04:28 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -174,29 +174,51 @@ as bots, you might have to enable this.&lt;/li&gt;
         <description>&lt;hr /&gt;
 &lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;‘Curse of dimensionality’ is a well known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.&lt;/p&gt;
+&lt;p&gt;‘Curse of dimensionality’ is a well-known problem in Data Science which often causes poor performance, inaccurate results and similarity measure break-down, etc. High dimensional datasets are typically sparse and data is often embedded in a lower-dimensional structure or Manifold. Manifold learning is an approach to non-linear dimensionality reduction. Algorithms for this task are based on the idea that the dimensionality of many data sets is only artificially high &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. In this note, we will see one of the many techniques in manifold learning called Diffusion Maps.&lt;/p&gt;
 
-&lt;p&gt;The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather that in the coordinate space itself.&lt;/p&gt;
+&lt;p&gt;The key to all manifold learning method is the realisation that Euclidean Distance, which is often used as a measure of similarity, make sense only ‘locally’. Therefore, assuming there is a lower-dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather than in the coordinate space itself.&lt;/p&gt;
 
-&lt;p&gt;Following figure depicts the reason for the same. Similarity measured in between point A and point B makes more sense if it is done through the geometric structure of the data.&lt;/p&gt;
+&lt;p&gt;Let us begin exploring more about Diffusion Map with following datapoints neatly arranged in &lt;strong&gt;S&lt;/strong&gt; shape&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;static/img/Diffusion_Map/original_figB.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/img/Diffusion_Map/original_figA.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-&lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;static/img/&quot; /&gt;
-&lt;br /&gt;&lt;em align=&quot;center&quot;&gt;Figure 1: Euclidean Distance meausured in&amp;lt;/br&amp;gt; co-ordinate space&lt;/em&gt;
-&lt;/p&gt;
+&lt;p&gt;In a normal circumstance, to find the similarity of point A and point B, we find the Euclidean Distance of the points in coordinate space. That would look similar to the following :-&lt;/p&gt;
 
-&lt;p align=&quot;center&quot;&gt;
-  &lt;img width=&quot;300&quot; height=&quot;300&quot; src=&quot;https://user-images.githubusercontent.com/279503/76152158-310c8180-60e2-11ea-8bbc-ec6a60c084d1.png&quot; /&gt;
-&lt;br /&gt;&lt;em align=&quot;center&quot;&gt;Figure 2: Euclidean Distance meausured through&amp;lt;/br&amp;gt; manifolds&lt;/em&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/static/img/Diffusion_Map/original_figB.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Because, the typical Euclidean Distance seems less and we tend to assume that the points are similar, while the actual distance through its geometric structure or manifold reveals that the distance is infact larger, and points are dissimilar. This is a typical toy example to demonstrate the importance of finding the underlying geometry.&lt;/p&gt;
+&lt;p&gt;However, knowing the geometric structure about the datapoint, we know that this similarity measure is inaccurate. Since there is a non-linear relationship between datapoints, it would be correct if we measure the similarity ( or distance) along the very geometric structure itself, as shown in the picture below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/Diffusion_Map/original_figC.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With Diffusion Map, we can do a non-linear dimensionality reduction as well as learn the underlying geometry of the high dimensional data. Lets get straight to the theory and implementation, hand in hand&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;h3 id=&quot;configuring-cuckoo-sandbox&quot;&gt;Configuring Cuckoo Sandbox&lt;/h3&gt;
+&lt;h3 id=&quot;theory-behind&quot;&gt;Theory behind&lt;/h3&gt;
 &lt;hr /&gt;
+
+&lt;h4 id=&quot;why-is-it-called-diffusion-map&quot;&gt;Why is it called Diffusion Map?&lt;/h4&gt;
+
+&lt;p&gt;The technique is based on time-dependent diffusion process, which is nothing but a randomwalk on the dataset where each hop has a probability associated with it. When the diffusion process runs for a time t, we get different probabilities of various paths it can take to calculate distance along the underlying geometric structure. Mathematically, we call this the steady-state probability of the Markov Chain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/Diffusion_Map/randomwalk.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h4&gt;
+
+&lt;p&gt;The connectivity between two data points, x and y is defined as the probability of jumping from x to y in one step of the randomwalk and is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;connectivity(x, y) = p(x,y)&lt;/script&gt;
+
+&lt;p&gt;However, it is useful to express the connectivity as a row-normalised likelihood function, K using Gaussian Kernel. This will be called &lt;strong&gt;diffusion kernel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;k(x,y) = \exp \left ( 
+-\frac{\vert x-y \vert ^2}{\alpha}
+\right )&lt;/script&gt;
+
+&lt;p&gt;Now we define a row-normalized diffusion matrix, &lt;strong&gt;P&lt;/strong&gt;. Mathematically, this is equivalent to the transition matrix in the Markov chain. While &lt;strong&gt;P&lt;/strong&gt; denotes the probability(connectivity in this case) of single hopping from point x to point y in single, &lt;script type=&quot;math/tex&quot;&gt;P^2&lt;/script&gt; denotes the probability of reaching y from x in two hops and so on. As we increase the number of hops or &lt;script type=&quot;math/tex&quot;&gt;P^t&lt;/script&gt; for increasing values of &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;, we observe that the diffusion process runs forward. Or in other words, the probability of following the geometric structure increases.&lt;/p&gt;
+
+&lt;h4 id=&quot;diffusion-distance&quot;&gt;Diffusion Distance&lt;/h4&gt;
+
+&lt;h4 id=&quot;connectivity-1&quot;&gt;Connectivity&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Diffusion map for manifold learning&lt;/strong&gt;&lt;/p&gt;
 
