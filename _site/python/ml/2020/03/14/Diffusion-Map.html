@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <title>Diffusion Map for manifold learning, Theory and Implementation - ~/web/logs</title>
+    <meta name="author" content="RandomWalk" />
+    <meta name="description" content="Diffusion Map for manifold learning, Theory and Implementation" />
+    <meta name="keywords" content="Diffusion Map for manifold learning, Theory and Implementation, ~/web/logs, python, ML" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <meta content="0192837465raj" property="fb:app_id">
+    <meta content="~/web/logs" property="og:site_name">
+
+    
+
+    
+      <meta content="Diffusion Map for manifold learning, Theory and Implementation" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta content="Personal website, blogs and other updates" property="og:description">
+    
+
+    
+      <meta content="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html" property="og:url">
+    
+
+    
+      <meta content="2020-03-14T00:00:00+00:00" property="article:published_time">
+      <meta content="http://localhost:4000/about/" property="article:author">
+    
+
+    
+
+    
+      
+        <meta content="python" property="article:section">
+      
+    
+
+    
+      
+    
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@rahulrajpl">
+    <meta name="twitter:creator" content="@rahulrajpl">
+
+    
+      <meta name="twitter:title" content="Diffusion Map for manifold learning, Theory and Implementation">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html">
+    
+
+    
+      <meta name="twitter:description" content="Personal website, blogs and other updates">
+    
+
+    
+
+    <!-- Font awesome icons -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/super-search.css">
+    <link rel="stylesheet" href="/static/css/thickbox.css">
+    <link rel="stylesheet" href="/static/css/projects.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    
+
+    <!-- for Tex Support (Math expressions)-->
+    <script type="text/javascript" 
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- Google Adsense Code starts -->
+    <script data-ad-client="ca-pub-2311920175546229" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Google Adsense Code ends -->
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-3">
+        <div class="fixed-condition">
+          <h1 class="author-name"><a href="/">RandomWalk</a></h1>
+          
+            <div class="profile-about">
+              Hello, there!
+              
+            </div>
+          
+          <div class="social">
+            <ul>
+              
+                <li><a href="https://twitter.com/rahulrajpl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a href="https://www.linkedin.com/in/rahul-r-909409184/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              
+                <li><a href="https://askubuntu.com/users/1004462/rahul-raj" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+              
+                <li><a href="https://github.com/rahulrajpl" target="_blank"><i class="fa fa-github"></i></a></li>
+              
+            </ul>
+          </div>
+          
+          <div class="search" id="js-search">
+              <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+              <ul class="search__results" id="js-search__results"></ul>
+          </div>
+          
+          <hr />
+          <ul class="sidebar-nav">
+              <strong>Navigation</strong>
+            <li><a href="/">Blogs</a></li>
+            
+              <li><a class="about" href="/category/python">Categories</a></li>
+            
+              <li><a class="about" href="/projects/">Projects</a></li>
+            
+              <li><a class="about" href="/about/">About</a></li>
+            
+              <li><a class="about" href="/feed.xml">XML Feed</a></li>
+            
+          </ul>
+          <hr />
+
+          <strong>Contact me</strong>
+          <p id="email">Email id-rahulr@iitk.ac.in<a href="#"
+            onclick="emailScramble.initAnimatedBubbleSort();return false;"> show</a></p>
+          
+          
+
+
+          </div>
+        <!-- end /.fixed-condition -->
+      </div>
+      <div class="col-sm-8 col-offset-1 main-layout">
+        <header class="post-header">
+  <h1 class="post-title">Diffusion Map for manifold learning, Theory and Implementation</h1>
+  
+</header>
+
+<span class="time">14 Mar 2020</span>
+
+  <span class="categories">
+    &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
+  </span>
+
+
+<div class="content">
+  <div class="post"><hr />
+<h3 id="introduction">Introduction</h3>
+<hr />
+<p>‘Curse of dimensionality’ is a well-known problem in Data Science, which often causes poor performance, inaccurate results, and, most importantly, a similarity measure break-down. The primary cause of this is because high dimensional datasets are typically sparse, and often a lower-dimensional structure or ‘Manifold’ would embed this data. So there is a non-linear relationship among the variables (or features or dimensions), which we need to learn to compute better similarity.</p>
+
+<p>Manifold learning is an approach to non-linear dimensionality reduction. The basis for algorithms in manifold learning is that the dimensionality of many data sets is only artificially high <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. In this blog, we learn one of the many techniques in manifold learning called Diffusion Maps. The key idea is that Euclidean Distance, which is the most common measure of similarity, is meaningful only ‘locally.’ Therefore, assuming there is a lower-dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather than in the Euclidean space itself.</p>
+
+<p>Let us begin exploring with the following example of 2D datapoints neatly arranged in <strong>S</strong> shape.</p>
+
+<p><img src="/static/img/Diffusion_Map/original_figA.png" alt="alt" /></p>
+
+<p>There is a definite shape to this dataset. Now, if we have to measure the similarity of two points in this set, we measure the Euclidean Distance. If this distance is small, then we say points are similar or if this is large, otherwise. The following figure represents this scenario.</p>
+
+<p><img src="/static/img/Diffusion_Map/original_figB.png" alt="alt" /></p>
+
+<p>However, knowing the geometric structure, we know that this similarity measure is inaccurate. Since there is a non-linear relationship between ‘x’ and ‘y’ coordinates, it would be correct if we measure the similarity (or distance) over the very geometric structure itself, as shown in the Figure below.</p>
+
+<p><img src="/static/img/Diffusion_Map/original_figC.png" alt="alt" /></p>
+
+<p>With Diffusion Map, we can do a non-linear dimensionality reduction as well as learn the underlying geometry of the high dimensional data. Let’s get straight to the theory and implementation, hand in hand</p>
+
+<hr />
+<h3 id="what-is-the-takeaway">What is the takeaway?</h3>
+<hr />
+<p>This blog aims to introduce one of the manifold learning techniques called <strong>Diffusion Map</strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. This technique enables us to understand the underlying geometric structure of high dimensional dataset as well as to reduce the dimensions, if required, by neatly capturing the non-linear relationships between the original dimensions.</p>
+
+<hr />
+<h3 id="theory-behind-verybriefly">Theory behind (very briefly)</h3>
+<hr />
+
+<p>The core idea is a time-dependent diffusion process, which is nothing but a random walk on the dataset where each hop has a probability associated with it. When the diffusion process runs for a time t, we get different probabilities of various paths it can take to calculate the distance over the underlying geometric structure. Mathematically, we call this the steady-state probability of the Markov Chain.</p>
+
+<p><img src="/static/img/Diffusion_Map/randomwalk.png" alt="alt" /></p>
+
+<p>The connectivity between two data points, x, and y, is defined as the probability of jumping from x to y in one step of the random walk and is</p>
+
+<script type="math/tex; mode=display">connectivity(x, y) = p(x,y)</script>
+
+<p>However, it is useful to express the connectivity as a row-normalized likelihood function, K using Gaussian Kernel. This will be called <strong>diffusion kernel</strong></p>
+
+<script type="math/tex; mode=display">k(x,y) = \exp \left ( 
+-\frac{\vert x-y \vert ^2}{\alpha}
+\right )</script>
+
+<p>Now we define a row-normalized diffusion matrix, P.  Mathematically, this is equivalent to the transition matrix in the Markov chain. While P denotes the probability (or connectivity in this case) of single hopping from point x to point y, P² denotes the probability of reaching y from x in two hops and so on. As we increase the number of hops or Pᵗ for increasing values of t we observe that the diffusion process runs forward. Or in other words, the probability of following the geometric structure increases.</p>
+
+<p>If you would like to dig deeper into the theory behind, the <a href="https://medium.com/r/?url=https%3A%2F%2Finside.mines.edu%2F~whereman%2Ftalks%2FdelaPorte-Herbst-Hereman-vanderWalt-DiffusionMaps-PRASA2008.pdf">paper</a> has explained it pretty neatly. For a quick overview, <a href="https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDiffusion_map">this</a> Wikipedia article also explains the theory well.</p>
+
+<hr />
+<h3 id="implementation">Implementation</h3>
+<hr />
+
+<p>To demonstrate the algorithm, we begin with a dataset having a definite geometric structure. Let us begin by creating a 2D figure, as shown earlier. Our main aim is to find out whether the diffusion map unravels the underlying geometric structure of data or not.</p>
+
+<p><img src="/static/img/Diffusion_Map/original_figA.png" alt="alt" /></p>
+
+<p>Now, let us add a synthetic 3rd dimension (data drawn from a uniform distribution) to this 2D dataset. Thus our new 3D dataset is as follows</p>
+
+<p><img src="/static/img/Diffusion_Map/3Dset.gif" alt="alt" /></p>
+
+<p>As you might have noticed, the 3D dataset preserves the ‘S’ shape in one angle, and that is correct. Now our goal is to flatten the dimensions to 2 while preserving this shape. After applying the Diffusion Map, hopefully, we should see the ‘S’ like structure in 2D.</p>
+
+<hr />
+<h3 id="output">Output</h3>
+<hr />
+
+<p><img src="/static/img/Diffusion_Map/01to09.png" alt="alt" /></p>
+
+<hr />
+<h3 id="result">Result</h3>
+<hr />
+
+<p>As it is evident from the above output figures, with a diffusion map applied to reduce dimension from 3 to 2, we get to understand somewhat the original geometric structure, which is the ‘S’ shape. With varying values for alpha, we get slightly different variations in the final structure. (alpha is the parameter in diffusion kernel described above).</p>
+
+<hr />
+<h3 id="source-code">Source Code</h3>
+<hr />
+
+<p>Source code is available <a href="https://medium.com/r/?url=https%3A%2F%2Fgist.github.com%2Frahulrajpl%2F36a5724d0c261b915292182b1d741393">here</a> and is open-sourced under MIT License. You can try out the code in Google Colaboratory with the link provided on top of the gist.</p>
+
+<hr />
+<h3 id="references">References:</h3>
+<hr />
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Manifold Learning methods in Scikit-Learn (https://scikit-learn.org/stable/modules/manifold.html) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Porte, Herbst, Hereman, Walt, <em>An introduction to Diffusion Maps</em> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  
+  <div class="share-page">
+  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+
+  <!-- Twitter -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="rahulrajpl">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook -->
+  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=0192837465raj";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</div>
+
+
+  
+    
+      
+        
+          
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2020/01/30/Setting-up-Cuckoo-Sandbox.html">Diffusin Map for manifold learning, Theory and Implementation</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/bash">bash</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html">Realtime 3D plot using matplotlib library</a>
+                  
+                    (Categories: <a href="/category/DataViz">DataViz</a>, <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html">Introduction to dynamic realtime plotting with Plotly/Dash</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/DataViz">DataViz</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network</a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+  
+  </ul>
+</div>
+
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/security/2020/02/09/Setting-up-Cuckoo-Sandbox.html">&laquo; Setting up Cuckoo Sandbox and Kioptrix for security hands-on</a>
+  
+  
+</div>
+
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "randomwalk-in";
+    var disqus_identifier = "http://localhost:4000_Diffusion Map for manifold learning, Theory and Implementation";
+    var disqus_title = "Diffusion Map for manifold learning, Theory and Implementation";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
+
+        <footer style="text-align: right;">
+          &copy; RandomWalk
+          
+            - <a href="https://github.com/rahulrajpl">https://github.com/rahulrajpl</a> - Powered by Jekyll.
+          
+          <div class="btn-github" style="float:right;">
+            <!-- <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="100" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="100" height="20px"></iframe> -->
+          </div>
+        </footer>
+      </div>
+      <!-- end /.col-sm-8 -->
+    </div>
+    <!-- end /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+    <!-- Email unscramble script -->
+    <!-- Script Author: http://jeffdonahue.com/ -->
+    <script src="/static/js/scramble.js"></script>
+    <script>
+        emailScramble = new scrambledString(document.getElementById('email'),
+            'emailScramble', 'a.k.r@aihnitulirc',
+            [13, 15, 11, 12, 1, 7, 2, 9, 3, 17, 8, 10, 4, 5, 16, 6, 14]);
+    </script>
+  </body>
+</html>
+
