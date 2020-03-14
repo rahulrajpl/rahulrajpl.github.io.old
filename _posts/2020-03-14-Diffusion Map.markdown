@@ -59,7 +59,7 @@ $$
 
 Now we define a row-normalized diffusion matrix, P.  Mathematically, this is equivalent to the transition matrix in the Markov chain. While P denotes the probability (or connectivity in this case) of single hopping from point x to point y, P² denotes the probability of reaching y from x in two hops and so on. As we increase the number of hops or Pᵗ for increasing values of t we observe that the diffusion process runs forward. Or in other words, the probability of following the geometric structure increases.
 
-If you would like to dig deeper into the theory behind, the [paper](https://medium.com/r/?url=https%3A%2F%2Finside.mines.edu%2F~whereman%2Ftalks%2FdelaPorte-Herbst-Hereman-vanderWalt-DiffusionMaps-PRASA2008.pdf) has explained it pretty neatly. For a quick overview, [this](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDiffusion_map) Wikipedia article also explains the theory well.
+If you would like to dig deeper into the theory behind, the [paper](https://inside.mines.edu/~whereman/talks/delaPorte-Herbst-Hereman-vanderWalt-DiffusionMaps-PRASA2008.pdf) has explained it pretty neatly. For a quick overview, [this](https://en.wikipedia.org/wiki/Diffusion_map) Wikipedia article also explains the theory well.
 
 
 
@@ -94,7 +94,7 @@ As it is evident from the above output figures, with a diffusion map applied to 
 ### Source Code
 -----------------------
 
-Source code is available [here](https://medium.com/r/?url=https%3A%2F%2Fgist.github.com%2Frahulrajpl%2F36a5724d0c261b915292182b1d741393) and is open-sourced under MIT License. You can try out the code in Google Colaboratory with the link provided on top of the gist.
+Source code is available [here](https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393) and is open-sourced under MIT License. You can try out the code in Google Colaboratory with the link provided on top of the gist.
 
 
 -----------------------

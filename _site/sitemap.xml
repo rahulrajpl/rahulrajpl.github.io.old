@@ -5,8 +5,8 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Mar 2020 04:42:34 +0000</pubDate>
-    <lastBuildDate>Sat, 14 Mar 2020 04:42:34 +0000</lastBuildDate>
+    <pubDate>Sat, 14 Mar 2020 04:51:19 +0000</pubDate>
+    <lastBuildDate>Sat, 14 Mar 2020 04:51:19 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -57,7 +57,7 @@
 
 &lt;p&gt;Now we define a row-normalized diffusion matrix, P.  Mathematically, this is equivalent to the transition matrix in the Markov chain. While P denotes the probability (or connectivity in this case) of single hopping from point x to point y, P² denotes the probability of reaching y from x in two hops and so on. As we increase the number of hops or Pᵗ for increasing values of t we observe that the diffusion process runs forward. Or in other words, the probability of following the geometric structure increases.&lt;/p&gt;
 
-&lt;p&gt;If you would like to dig deeper into the theory behind, the &lt;a href=&quot;https://medium.com/r/?url=https%3A%2F%2Finside.mines.edu%2F~whereman%2Ftalks%2FdelaPorte-Herbst-Hereman-vanderWalt-DiffusionMaps-PRASA2008.pdf&quot;&gt;paper&lt;/a&gt; has explained it pretty neatly. For a quick overview, &lt;a href=&quot;https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDiffusion_map&quot;&gt;this&lt;/a&gt; Wikipedia article also explains the theory well.&lt;/p&gt;
+&lt;p&gt;If you would like to dig deeper into the theory behind, the &lt;a href=&quot;https://inside.mines.edu/~whereman/talks/delaPorte-Herbst-Hereman-vanderWalt-DiffusionMaps-PRASA2008.pdf&quot;&gt;paper&lt;/a&gt; has explained it pretty neatly. For a quick overview, &lt;a href=&quot;https://en.wikipedia.org/wiki/Diffusion_map&quot;&gt;this&lt;/a&gt; Wikipedia article also explains the theory well.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
@@ -89,7 +89,7 @@
 &lt;h3 id=&quot;source-code&quot;&gt;Source Code&lt;/h3&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;Source code is available &lt;a href=&quot;https://medium.com/r/?url=https%3A%2F%2Fgist.github.com%2Frahulrajpl%2F36a5724d0c261b915292182b1d741393&quot;&gt;here&lt;/a&gt; and is open-sourced under MIT License. You can try out the code in Google Colaboratory with the link provided on top of the gist.&lt;/p&gt;
+&lt;p&gt;Source code is available &lt;a href=&quot;https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393&quot;&gt;here&lt;/a&gt; and is open-sourced under MIT License. You can try out the code in Google Colaboratory with the link provided on top of the gist.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
