@@ -1,5 +1,13 @@
 [
 	{
+		"slug" : "diffmap",
+		"name": "Diffusion Map",
+		"image": "3Dset.gif",
+		"url": "https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393",
+		"date": "Mar 2020",
+		"tags": ["Python", "Machine Learning"]
+	},
+	{
 		"slug" : "netizenship",
 		"name": "OSINT tool for uname recon",
 		"image": "netizen.gif",
