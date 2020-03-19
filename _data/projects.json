@@ -1,11 +1,19 @@
 [
 	{
+		"slug" : "covid19",
+		"name": "Covid-19 India Stat",
+		"image": "covid19India.gif",
+		"url": "https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393",
+		"date": "Mar 2020",
+		"tags": ["Analytics"]
+	},
+	{
 		"slug" : "diffmap",
 		"name": "Diffusion Map",
 		"image": "3Dset.gif",
 		"url": "https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393",
 		"date": "Mar 2020",
-		"tags": ["Python", "Machine Learning"]
+		"tags": ["Machine Learning"]
 	},
 	{
 		"slug" : "netizenship",
@@ -13,7 +21,7 @@
 		"image": "netizen.gif",
 		"url": "https://github.com/rahulrajpl/netizenship",
 		"date": "Jan 2020",
-		"tags": ["Python", "Cybersecurity"]
+		"tags": ["Cybersecurity"]
 	},
 	{
 		"slug" : "intrusion",
@@ -21,7 +29,7 @@
 		"image": "malware.gif",
 		"url": "https://github.com/rahulrajpl/malware-fine-grained-classification",
 		"date": "Oct 2019",
-		"tags": ["Python","Machine Learning", "Cybersecurity"]
+		"tags": ["Machine Learning", "Cybersecurity"]
 	},
 	{
 		"slug" : "bias",
@@ -29,7 +37,7 @@
 		"image": "bias.png",
 		"url": "https://github.com/rahulrajpl/Media-Political-Bias",
 		"date": "Sept 2018",
-		"tags": ["Python","Data Mining"]
+		"tags": ["Data Mining"]
 	},
 	{
 		"slug" : "ethereum",
@@ -53,7 +61,7 @@
 		"image": "pasad.png",
 		"url": "https://github.com/rahulrajpl/PyPASAD",
 		"date": "Sept 2019",
-		"tags": ["Python", "Cybersecurity"]
+		"tags": ["Cybersecurity"]
 	},
 	{
 		"slug" : "django",
@@ -61,7 +69,7 @@
 		"image": "heroku.png",
 		"url": "https://github.com/rahulrajpl/kartik-blog",
 		"date": "Oct 2019",
-		"tags": ["Python", "Django"]
+		"tags": ["Web"]
 	},
 	
 	{
@@ -70,6 +78,6 @@
 		"image": "rw.png",
 		"url": "https://github.com/rahulrajpl/rahulrajpl.github.io",
 		"date": "Oct 2019",
-		"tags": ["Jekyll"]
+		"tags": ["Web"]
 	},
 ]
