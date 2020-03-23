@@ -39,4 +39,7 @@ I use and advocate opensource. Design used [here](https://agusmakmun.github.io/)
 
 **Disclaimer**
 
-All pictures available in this website are 'labelled for reuse'. Most pictures used for projects pages are representational. All efforts have been made to ensure references to original sources for every blog or project or otherwise. If something is still missing, please email me for inclusion.
+- Google Analytics is enabled on this website, purely for learning.
+- All pictures available in this website are 'labelled for reuse'. 
+- Most pictures used for projects pages are representational. 
+- All efforts have been made to ensure references to original sources for every blog or project or otherwise. If something is still missing, please email me for inclusion.
