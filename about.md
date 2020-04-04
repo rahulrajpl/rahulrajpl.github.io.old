@@ -19,12 +19,6 @@ Kalyanpur, Kanpur, UP - 208016
 
 ---
 
-**Advisor**
-
-[Dr. Prabhakar T.V](https://www.cse.iitk.ac.in/users/tvp/)
-
----
-
 **Thanks**
 
 I have borrowed the hardwork of following people to build this website. Thanks to
