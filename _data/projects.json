@@ -3,7 +3,7 @@
 		"slug" : "covid19",
 		"name": "Covid-19 India Stat",
 		"image": "covid19India.gif",
-		"url": "https://gist.github.com/rahulrajpl/36a5724d0c261b915292182b1d741393",
+		"url": "https://github.com/rahulrajpl/covid19India)",
 		"date": "Mar 2020",
 		"tags": ["Analytics"]
 	},
@@ -23,6 +23,15 @@
 		"date": "Jan 2020",
 		"tags": ["Cybersecurity"]
 	},
+	
+	{
+		"slug" : "django",
+		"name": "Websites in Django",
+		"image": "heroku.png",
+		"url": "https://github.com/rahulrajpl/kartik-blog",
+		"date": "Nov 2019",
+		"tags": ["Web"]
+	},
 	{
 		"slug" : "intrusion",
 		"name": "Intrusion Detector Learning",
@@ -32,19 +41,27 @@
 		"tags": ["Machine Learning", "Cybersecurity"]
 	},
 	{
-		"slug" : "bias",
-		"name": "Partisan Bias in News",
-		"image": "bias.png",
-		"url": "https://github.com/rahulrajpl/Media-Political-Bias",
-		"date": "Sept 2018",
-		"tags": ["Data Mining"]
+		"slug": "personal-blog",
+		"name": "PersonalBlog",
+		"image": "rw.png",
+		"url": "https://github.com/rahulrajpl/rahulrajpl.github.io",
+		"date": "Oct 2019",
+		"tags": ["Web"]
+	},
+	{
+		"slug" : "pypasad",
+		"name": "Stealthy Attack Detection",
+		"image": "pasad.png",
+		"url": "https://github.com/rahulrajpl/PyPASAD",
+		"date": "Sept 2019",
+		"tags": ["Cybersecurity"]
 	},
 	{
 		"slug" : "ethereum",
 		"name": "Employee Feedback DApp",
 		"image": "ethereum.jpg",
 		"url": "https://github.com/ABHISHEKVALSAN/EtherFeeds/tree/master/etherfeeds",
-		"date": "Mar 2019",
+		"date": "Apr 2019",
 		"tags": ["Django","Blockchain"]
 	},
 	{
@@ -56,28 +73,11 @@
 		"tags": ["Android"]
 	},
 	{
-		"slug" : "pypasad",
-		"name": "Stealthy Attack Detection",
-		"image": "pasad.png",
-		"url": "https://github.com/rahulrajpl/PyPASAD",
-		"date": "Sept 2019",
-		"tags": ["Cybersecurity"]
-	},
-	{
-		"slug" : "django",
-		"name": "Websites in Django",
-		"image": "heroku.png",
-		"url": "https://github.com/rahulrajpl/kartik-blog",
-		"date": "Oct 2019",
-		"tags": ["Web"]
-	},
-	
-	{
-		"slug": "personal-blog",
-		"name": "PersonalBlog",
-		"image": "rw.png",
-		"url": "https://github.com/rahulrajpl/rahulrajpl.github.io",
-		"date": "Oct 2019",
-		"tags": ["Web"]
+		"slug" : "bias",
+		"name": "Partisan Bias in News",
+		"image": "bias.png",
+		"url": "https://github.com/rahulrajpl/Media-Political-Bias",
+		"date": "Sept 2018",
+		"tags": ["Data Mining"]
 	},
 ]
