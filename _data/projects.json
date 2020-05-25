@@ -30,7 +30,7 @@
 		"image": "heroku.png",
 		"url": "https://github.com/rahulrajpl/kartik-blog",
 		"date": "Nov 2019",
-		"tags": ["Web"]
+		"tags": ["Django", "Web"]
 	},
 	{
 		"slug" : "intrusion",
