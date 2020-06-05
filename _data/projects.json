@@ -1,5 +1,13 @@
 [
 	{
+		"slug" : "wexda",
+		"name": "WExDA",
+		"image": "wexda_logo.png",
+		"url": "https://github.com/rahulrajpl/wexda",
+		"date": "Jun 2020",
+		"tags": ["Analytics", "Web", "Machine Learning"]
+	},
+	{
 		"slug" : "covid19",
 		"name": "Covid-19 India Stat",
 		"image": "covid19India.gif",
