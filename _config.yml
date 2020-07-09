@@ -13,7 +13,7 @@ collections:
     title: Uploads
     output: true
 description: Personal website, blogs and other updates
-author: RandomWalk
+author: Random Walk
 github: https://github.com/rahulrajpl
 about: Hello, there!
 disqus_shortname: randomwalk-in
@@ -22,16 +22,16 @@ enableTags: true
 tagarray: []
 social:
 - icon: fa-twitter
-  link: https://twitter.com/rahulrajpl
-- icon: fa-linkedin
-  link: https://www.linkedin.com/in/rahul-r-909409184/
-- icon: fa-stack-exchange
-  link: https://askubuntu.com/users/1004462/rahul-raj
+  link: https://twitter.com/rand0mwalker
+# - icon: fa-linkedin
+  # link: https://www.linkedin.com/in/rahul-r-909409184/
+# - icon: fa-stack-exchange
+#   link: https://askubuntu.com/users/1004462/rahul-raj
 - icon: fa-github
   link: https://github.com/rahulrajpl
 share:
-  twitter_username: rahulrajpl
-  fb_appid: '0192837465raj'
+  twitter_username: rand0mwalker
+  fb_appid: ''
 urls:
 - text: Categories
   url: "/category/python"

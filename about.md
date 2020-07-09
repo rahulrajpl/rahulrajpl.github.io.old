@@ -6,11 +6,13 @@ layout: page
 
 Hey there,
 
-My name is Rahul. I am a Computer Science student. I maintain this blog to share my work/ learning/ research/ thoughts/ opinions, etc. related to cybersecurity and machine learning. For one to one conversation, please use my public key [here](/static/base.txt).
+Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions/ etc. related to cybersecurity and machine learning (Or sometimes Computer Science in general). For one to one conversation with author, please use my public key [here](/static/base.txt).
 
 ---
 
-**Reach me here**
+**Contact**
+
+Best way to contact me is email. If you want to meet in person I am here,
 
 Room No: RM302,<br>
 [Dept. of Computer Science and Engineering](http://www.cse.iitk.ac.in/),<br>
@@ -21,13 +23,13 @@ Kalyanpur, Kanpur, UP - 208016
 
 **Thanks**
 
-I have borrowed the hardwork of following people to build this website. Thanks to
+Author has borrowed the hardwork of following people to build this website. Thanks to
 
 1. [Agusmakmun](https://github.com/agusmakmun)(for the jekyll theme)
 
 2. [Jeff Donahue](http://jeffdonahue.com/) (for the email unscramble script)
 
-I use and advocate opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.
+Author uses and advocates opensource. Design used [here](https://agusmakmun.github.io/) is also open to [fork](https://github.com/rahulrajpl/rahulrajpl.github.io) and improve further.
 
 ---
 
