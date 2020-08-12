@@ -1,5 +1,5 @@
 ---
-title: Diffusin Map for manifold learning, Theory and Implementation
+title: Diffusion Map for manifold learning, Theory and Implementation
 date: 2020-01-30 00:00:00 Z
 categories:
 - python

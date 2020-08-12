@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Convolutional Neural Network using PyTorch - ~/web/logs</title>
+    <title>Alternative for forticlient vpn tool - ~/web/logs</title>
     <meta name="author" content="Random Walk" />
-    <meta name="description" content="Convolutional Neural Network using PyTorch" />
-    <meta name="keywords" content="Convolutional Neural Network using PyTorch, ~/web/logs, python, ML" />
+    <meta name="description" content="Alternative for forticlient vpn tool" />
+    <meta name="keywords" content="Alternative for forticlient vpn tool, ~/web/logs, network" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Convolutional Neural Network using PyTorch" property="og:title">
+      <meta content="Alternative for forticlient vpn tool" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,11 +25,11 @@
     
 
     
-      <meta content="http://localhost:4000/python/ml/2019/12/25/CNN.html" property="og:url">
+      <meta content="http://localhost:4000/network/2020/08/11/Alternative-for-Forticlient.html" property="og:url">
     
 
     
-      <meta content="2019-12-25T00:00:00+00:00" property="article:published_time">
+      <meta content="2020-08-11T00:00:00+00:00" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
@@ -37,7 +37,7 @@
 
     
       
-        <meta content="python" property="article:section">
+        <meta content="network" property="article:section">
       
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rand0mwalker">
 
     
-      <meta name="twitter:title" content="Convolutional Neural Network using PyTorch">
+      <meta name="twitter:title" content="Alternative for forticlient vpn tool">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/python/ml/2019/12/25/CNN.html">
+      <meta name="twitter:url" content="http://localhost:4000/network/2020/08/11/Alternative-for-Forticlient.html">
     
 
     
@@ -155,28 +155,84 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Convolutional Neural Network using PyTorch</h1>
+  <h1 class="post-title">Alternative for forticlient vpn tool</h1>
   
 </header>
 
-<span class="time">25 Dec 2019</span>
+<span class="time">11 Aug 2020</span>
 
   <span class="categories">
-    &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
+    &raquo; <a href="/category/network">network</a>
   </span>
 
 
 <div class="content">
-  <div class="post"><p>Convolutional Neural Network using PyTorch.</p>
+  <div class="post"><hr />
+<h3 id="problem-statement">Problem Statement</h3>
+<hr />
+<p>For several days, I have been facing issues with the ‘Forticlient’ VPN client on my linux machine. With limited knowledge in networking, I was unable to resolve the issues causing the following error</p>
 
-<p>Notebook can be accessed here: <a href="https://colab.research.google.com/drive/1BUUQvPNBbjJNiXeMWNDquxZRYZsGSjEU">link</a></p>
+<p><code class="language-plaintext highlighter-rouge">Setup tunnel failed</code></p>
 
-<p>Credits:</p>
+<p><code class="language-plaintext highlighter-rouge">Can not connect to proxy</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PyTorch for Deep Learning and Computer Vision
+<p><img src="/static/img/forti/forticlient.png" alt="alt" /></p>
 
-Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
-</code></pre></div></div>
+<p><img src="/static/img/forti/err1.png" alt="alt" /></p>
+
+<p><img src="/static/img/forti/err2.png" alt="alt" /></p>
+
+<hr />
+<h3 id="alternative-solution">Alternative solution</h3>
+<hr />
+
+<p>Solution is to use <a href="https://github.com/adrienverge/openfortivpn">openfortivpn</a>. Following paragraphs explains how to use this tool to setup a VPN.</p>
+
+<h4 id="step-1-download-and-install-tool">Step 1. Download and install tool</h4>
+
+<p>Use the following command to install the tool on Ubuntu/Kubuntu 18.04+</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>openfortivpn</code></pre></figure>
+
+<h4 id="step-2-initial-configuration-for-vpn">Step 2. Initial configuration for VPN</h4>
+
+<p>Open <code class="language-plaintext highlighter-rouge">/etc/openfortivpn/config</code> file and edit the settings as follows</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">host <span class="o">=</span> 
+port <span class="o">=</span> 
+username <span class="o">=</span> 
+password <span class="o">=</span> </code></pre></figure>
+
+<h4 id="step-3-connect-the-vpn">Step 3. Connect the VPN</h4>
+
+<p>Once the configuration is done, we can start using the tool by following command.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>openfortivpn</code></pre></figure>
+
+<p>You can use the option ‘-c’ to specify the configuration file for a particular VPN.
+Once the connection is ready, you will see a message like below, indicting that the VPN tunnel is up and running</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">INFO:   Connected to gateway.
+INFO:   Authenticated.
+INFO:   Remote gateway has allocated a VPN.
+Using interface ppp0
+Connect: ppp0 &lt;<span class="nt">--</span><span class="o">&gt;</span> /dev/pts/4
+INFO:   Got addresses: <span class="o">[</span>&lt;IP&gt;], ns <span class="o">[</span>&lt;IP&gt;, &lt;IP&gt;]
+INFO:   negotiation <span class="nb">complete
+</span>INFO:   Got addresses: <span class="o">[</span>&lt;IP&gt;], ns <span class="o">[</span>&lt;IP&gt;, &lt;IP&gt;]
+INFO:   negotiation <span class="nb">complete
+</span>INFO:   Got addresses: <span class="o">[</span>&lt;IP&gt;], ns <span class="o">[</span>&lt;IP&gt;, &lt;IP&gt;]
+INFO:   negotiation <span class="nb">complete
+</span>INFO:   negotiation <span class="nb">complete
+local  </span>IP address 10.10.11.227
+remote IP address 192.0.2.1
+primary   DNS address &lt;IP&gt;
+secondary DNS address &lt;IP&gt;
+INFO:   Interface ppp0 is UP.
+INFO:   Setting new routes...
+INFO:   Adding VPN nameservers...
+INFO:   Tunnel is up and running.</code></pre></figure>
+
 </div>
   
   <div class="share-page">
@@ -187,7 +243,7 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2019/12/25/CNN.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/network/2020/08/11/Alternative-for-Forticlient.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -208,35 +264,15 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
-          
-      
     
   
     
       
         
           
-            
-            <div class="panel-body">
-              <h4>Related Posts</h4>
-              <ul>
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html">Diffusion Map for manifold learning, Theory and Implementation</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
       
     
         
-          
-      
           
       
     
@@ -246,56 +282,15 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
-          
-      
     
   
     
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
       
     
         
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/bash/2020/01/19/PoetryPackaging.html">Packaging and shipping your python tools using Poetry</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/bash">bash</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
-      
-    
-        
-          
-      
           
       
     
@@ -305,22 +300,8 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
-          
-      
     
         
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/dataviz/python/2020/01/16/Realtime-3D-plot.html">Realtime 3D plot using matplotlib library</a>
-                  
-                    (Categories: <a href="/category/DataViz">DataViz</a>, <a href="/category/python">python</a>)
-                  
-                </li>
-          
-          
-        
-      
           
       
     
@@ -330,56 +311,8 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
-          
-      
-    
-  
-    
-      
-        
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/dataviz/2020/01/06/dash-intro.html">Introduction to dynamic realtime plotting with Plotly/Dash</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/DataViz">DataViz</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
-      
     
         
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
-      
-    
-        
-          
-      
           
       
     
@@ -389,14 +322,6 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
-          
-      
-    
-        
-          
-      
-          
-      
     
   
     
@@ -404,21 +329,47 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
         
           
       
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
+          
+      
+    
+        
+          
+      
+    
+  
+    
+      
+        
           
       
     
   
   
-  </ul>
-</div>
-
 
 <div class="PageNavigation">
   
-    <a class="prev" href="/python/2019/10/27/Install-Python-copy.html">&laquo; Install python3.6+ for local user on remote machine without root access</a>
+    <a class="prev" href="/python/ml/2020/03/14/Diffusion-Map.html">&laquo; Diffusion Map for manifold learning, Theory and Implementation</a>
   
-  
-    <a class="next" href="/python/ml/2020/01/03/StyleTransfer.html">Image Style Transfer using Convolutional Neural Network &raquo;</a>
   
 </div>
 
@@ -427,8 +378,8 @@ Rayan Slim, Jad Slim, Amer Sharaf, Sarmad Tanveer
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Convolutional Neural Network using PyTorch";
-    var disqus_title = "Convolutional Neural Network using PyTorch";
+    var disqus_identifier = "http://localhost:4000_Alternative for forticlient vpn tool";
+    var disqus_title = "Alternative for forticlient vpn tool";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

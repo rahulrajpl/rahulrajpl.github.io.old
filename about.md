@@ -12,12 +12,7 @@ Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions
 
 **Contact**
 
-Best way to contact me is email. If you want to meet in person I am here,
-
-Room No: RM302,<br>
-[Dept. of Computer Science and Engineering](http://www.cse.iitk.ac.in/),<br>
-[Indian Institute of Technology, Kanpur](http://www.iitk.ac.in/)<br>
-Kalyanpur, Kanpur, UP - 208016
+Best way to contact me is email. 
 
 ---
 

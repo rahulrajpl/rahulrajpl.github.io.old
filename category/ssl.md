@@ -1,7 +1,7 @@
 ---
-title: SSL
-permalink: "/category/ssl"
+title: network
+permalink: "/category/network"
 layout: posts_by_category
-categories: ssl
+categories: network
 ---
 

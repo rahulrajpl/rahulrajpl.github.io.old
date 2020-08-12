@@ -5,9 +5,87 @@
     <description>Personal website, blogs and other updates</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Jul 2020 08:27:47 +0000</pubDate>
-    <lastBuildDate>Thu, 09 Jul 2020 08:27:47 +0000</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2020 12:21:10 +0000</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2020 12:21:10 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Alternative for forticlient vpn tool</title>
+        <description>&lt;hr /&gt;
+&lt;h3 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;For several days, I have been facing issues with the ‘Forticlient’ VPN client on my linux machine. With limited knowledge in networking, I was unable to resolve the issues causing the following error&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Setup tunnel failed&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Can not connect to proxy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/forti/forticlient.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/forti/err1.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/img/forti/err2.png&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;alternative-solution&quot;&gt;Alternative solution&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Solution is to use &lt;a href=&quot;https://github.com/adrienverge/openfortivpn&quot;&gt;openfortivpn&lt;/a&gt;. Following paragraphs explains how to use this tool to setup a VPN.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1-download-and-install-tool&quot;&gt;Step 1. Download and install tool&lt;/h4&gt;
+
+&lt;p&gt;Use the following command to install the tool on Ubuntu/Kubuntu 18.04+&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openfortivpn&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-2-initial-configuration-for-vpn&quot;&gt;Step 2. Initial configuration for VPN&lt;/h4&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/openfortivpn/config&lt;/code&gt; file and edit the settings as follows&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;host &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+port &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+username &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+password &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-3-connect-the-vpn&quot;&gt;Step 3. Connect the VPN&lt;/h4&gt;
+
+&lt;p&gt;Once the configuration is done, we can start using the tool by following command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;openfortivpn&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can use the option ‘-c’ to specify the configuration file for a particular VPN.
+Once the connection is ready, you will see a message like below, indicting that the VPN tunnel is up and running&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;INFO:   Connected to gateway.
+INFO:   Authenticated.
+INFO:   Remote gateway has allocated a VPN.
+Using interface ppp0
+Connect: ppp0 &amp;lt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/pts/4
+INFO:   Got addresses: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;], ns &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;, &amp;lt;IP&amp;gt;]
+INFO:   negotiation &lt;span class=&quot;nb&quot;&gt;complete
+&lt;/span&gt;INFO:   Got addresses: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;], ns &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;, &amp;lt;IP&amp;gt;]
+INFO:   negotiation &lt;span class=&quot;nb&quot;&gt;complete
+&lt;/span&gt;INFO:   Got addresses: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;], ns &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;IP&amp;gt;, &amp;lt;IP&amp;gt;]
+INFO:   negotiation &lt;span class=&quot;nb&quot;&gt;complete
+&lt;/span&gt;INFO:   negotiation &lt;span class=&quot;nb&quot;&gt;complete
+local  &lt;/span&gt;IP address 10.10.11.227
+remote IP address 192.0.2.1
+primary   DNS address &amp;lt;IP&amp;gt;
+secondary DNS address &amp;lt;IP&amp;gt;
+INFO:   Interface ppp0 is UP.
+INFO:   Setting new routes...
+INFO:   Adding VPN nameservers...
+INFO:   Tunnel is up and running.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/network/2020/08/11/Alternative-for-Forticlient.html</link>
+        <guid isPermaLink="true">http://localhost:4000/network/2020/08/11/Alternative-for-Forticlient.html</guid>
+        
+        
+        <category>network</category>
+        
+      </item>
     
       <item>
         <title>Diffusion Map for manifold learning, Theory and Implementation</title>
