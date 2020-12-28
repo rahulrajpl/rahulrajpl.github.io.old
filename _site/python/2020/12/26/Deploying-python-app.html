@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <title>Maximising accuracy with limited training data using Transfer Learning  - ~/web/logs</title>
+    <title>Install Python modules to machine without internet - ~/web/logs</title>
     <meta name="author" content="Random Walk" />
-    <meta name="description" content="Maximising accuracy with limited training data using Transfer Learning " />
-    <meta name="keywords" content="Maximising accuracy with limited training data using Transfer Learning , ~/web/logs, python, ML" />
+    <meta name="description" content="Install Python modules to machine without internet" />
+    <meta name="keywords" content="Install Python modules to machine without internet, ~/web/logs, python" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <meta content="" property="fb:app_id">
     <meta content="~/web/logs" property="og:site_name">
@@ -16,7 +16,7 @@
     
 
     
-      <meta content="Maximising accuracy with limited training data using Transfer Learning " property="og:title">
+      <meta content="Install Python modules to machine without internet" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -25,11 +25,11 @@
     
 
     
-      <meta content="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html" property="og:url">
+      <meta content="http://localhost:4000/python/2020/12/26/Deploying-python-app.html" property="og:url">
     
 
     
-      <meta content="2020-01-26T00:00:00+00:00" property="article:published_time">
+      <meta content="2020-12-26T00:00:00+00:00" property="article:published_time">
       <meta content="http://localhost:4000/about/" property="article:author">
     
 
@@ -50,11 +50,11 @@
     <meta name="twitter:creator" content="@rand0mwalker">
 
     
-      <meta name="twitter:title" content="Maximising accuracy with limited training data using Transfer Learning ">
+      <meta name="twitter:title" content="Install Python modules to machine without internet">
     
 
     
-      <meta name="twitter:url" content="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">
+      <meta name="twitter:url" content="http://localhost:4000/python/2020/12/26/Deploying-python-app.html">
     
 
     
@@ -155,42 +155,46 @@
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
         <header class="post-header">
-  <h1 class="post-title">Maximising accuracy with limited training data using Transfer Learning </h1>
+  <h1 class="post-title">Install Python modules to machine without internet</h1>
   
 </header>
 
-<span class="time">26 Jan 2020</span>
+<span class="time">26 Dec 2020</span>
 
   <span class="categories">
-    &raquo; <a href="/category/python">python</a>, <a href="/category/ML">ML</a>
+    &raquo; <a href="/category/python">python</a>
   </span>
 
 
 <div class="content">
-  <div class="post"><hr />
-<h3 id="introduction">Introduction</h3>
-<hr />
-
-<p>Transfer Learning is a technique in Deep Learning in which the model trained in one problem is reused partly in another problem. This technique can be a powerful tool to acquire the highest accuracy with very limited data, which otherwise would not be possible.</p>
-
-<p>Transfer learning is demonstrated using pytorch and pretrained model called vgg16 in <a href="https://colab.research.google.com/drive/121mSI7rwrdEM9CMnmQn1zH260bUtJzqh">this</a> colab file.</p>
-
-<p>This lesson is part of tutorial, ‘Pytorch for Deep Learning and Computer Vision’ by Rayan Slim, Jad Slim, Amer Sharaf and Sarmad Tanveer. It is available in learning.oreilly.com</p>
+  <div class="post"><p>Often times, a python application is deployed on a machine with internet connectivity. In such cases, settingup the environment in respect of the dependecies would be fairly easy, as the packages or modules are installed using the regular <code class="language-plaintext highlighter-rouge">pip</code> or <code class="language-plaintext highlighter-rouge">conda</code> commands. The problem comes when the machine to be deployed is not internet facing. Following steps are to be taken in such scenarios (using pip)</p>
 
 <hr />
-<h3 id="learnings">Learnings</h3>
-<hr />
+<h4 id="step-1-download-required-packagesmodules">Step 1. Download required packages/modules</h4>
 
-<ol>
-  <li>Pretrained model approach to implement transfer learning</li>
-  <li>Various pretrained models in computer vision domain, viz. vgg16, vgg32, alexanet, etc.</li>
-  <li>Implementation and practical example to demonstrate</li>
-</ol>
+<p>First you will have to download the modules using an internet facing machine and locally store them in a repository. Use the following command to download the requisite dependecies</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pip</span> <span class="n">download</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">download</span><span class="o">-</span><span class="n">folder</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span></code></pre></figure>
 
 <hr />
-<h3 id="references">References:</h3>
+<h4 id="step-2-generate-a-requirementstxt-file-using-pip">Step 2. Generate a requirements.txt file using pip</h4>
+
+<p>You can create a requirements.txt file using the following command</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span></code></pre></figure>
+
 <hr />
-<p>This lesson is part of tutorial, ‘Pytorch for Deep Learning and Computer Vision’ by Rayan Slim, Jad Slim, Amer Sharaf and Sarmad Tanveer. It is available in learning.oreilly.com</p>
+<h4 id="step-3-deploy-the-app-on-non-internet-facing-machine">Step 3. Deploy the app on non-internet facing machine</h4>
+
+<p>Move the Folder in which the dependencies are downloaded along with the requirements.txt file</p>
+
+<hr />
+<h4 id="step-4-install-dependecies-locally-using-the-following-command">Step 4. Install dependecies locally using the following command</h4>
+
+<p>Following commands will install the dependecies which are downloaded earlier on the development PC.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">packages</span><span class="o">-</span><span class="n">folder</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span></code></pre></figure>
+
 </div>
   
   <div class="share-page">
@@ -201,7 +205,7 @@
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- Facebook -->
-  <div class="fb-share-button" data-href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+  <div class="fb-share-button" data-href="http://localhost:4000/python/2020/12/26/Deploying-python-app.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 
 <div id="fb-root"></div>
@@ -221,38 +225,24 @@
       
         
           
+      
+    
+  
+    
+      
+        
+          
+      
+    
+  
+    
+      
+        
+          
             
             <div class="panel-body">
               <h4>Related Posts</h4>
               <ul>
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/2020/12/26/Deploying-python-app.html">Install Python modules to machine without internet</a>
-                  
-                    (Categories: <a href="/category/python">python</a>)
-                  
-                </li>
-          
-          
-        
-      
-          
-      
-    
-  
-    
-      
-        
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
             
                 <li class="relatedPost">
                   <a href="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html">Diffusion Map for manifold learning, Theory and Implementation</a>
@@ -264,12 +254,8 @@
           
         
       
-          
-      
     
         
-          
-      
           
       
     
@@ -279,21 +265,25 @@
         
           
       
-          
-      
     
   
     
       
         
           
-      
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
+                  
+                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
+                  
+                </li>
           
+          
+        
       
     
         
-          
-      
           
       
     
@@ -313,12 +303,8 @@
           
         
       
-          
-      
     
         
-          
-      
           
       
     
@@ -326,8 +312,6 @@
     
       
         
-          
-      
           
       
     
@@ -344,15 +328,11 @@
           
         
       
-          
-      
     
   
     
       
         
-          
-      
           
       
     
@@ -372,12 +352,8 @@
           
         
       
-          
-      
     
         
-          
-      
           
       
     
@@ -397,12 +373,8 @@
           
         
       
-          
-      
     
         
-          
-      
           
       
     
@@ -412,12 +384,8 @@
         
           
       
-          
-      
     
         
-          
-      
           
       
     
@@ -425,8 +393,6 @@
     
       
         
-          
-      
           
       
     
@@ -438,10 +404,8 @@
 
 <div class="PageNavigation">
   
-    <a class="prev" href="/python/bash/2020/01/19/PoetryPackaging.html">&laquo; Packaging and shipping your python tools using Poetry</a>
+    <a class="prev" href="/network/2020/08/11/Alternative-for-Forticlient.html">&laquo; Alternative for forticlient vpn tool</a>
   
-  
-    <a class="next" href="/security/2020/02/09/Setting-up-Cuckoo-Sandbox.html">Setting up Cuckoo Sandbox and Kioptrix for security hands-on &raquo;</a>
   
 </div>
 
@@ -450,8 +414,8 @@
   <script type="text/javascript">
     /* <![CDATA[ */
     var disqus_shortname = "randomwalk-in";
-    var disqus_identifier = "http://localhost:4000_Maximising accuracy with limited training data using Transfer Learning ";
-    var disqus_title = "Maximising accuracy with limited training data using Transfer Learning ";
+    var disqus_identifier = "http://localhost:4000_Install Python modules to machine without internet";
+    var disqus_title = "Install Python modules to machine without internet";
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

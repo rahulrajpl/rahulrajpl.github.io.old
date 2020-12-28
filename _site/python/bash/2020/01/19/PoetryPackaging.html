@@ -167,7 +167,7 @@
 
 
 <div class="content">
-  <div class="post"><p>In this blog let’s see how we can package an application and distrubute it using tool called <strong>poetry</strong>.<sup id="fnref:3"><a href="#fn:3" class="footnote">1</a></sup></p>
+  <div class="post"><p>In this blog let’s see how we can package an application and distrubute it using tool called <strong>poetry</strong>.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">1</a></sup></p>
 
 <hr />
 <h3 id="step-1-download-and-install-poetry">Step 1. Download and Install Poetry</h3>
@@ -229,7 +229,7 @@ demo-tool <span class="o">=</span> <span class="s1">'demo-tool:main'</span>
 <h3 id="step-3-distributing">Step 3. Distributing</h3>
 <hr />
 
-<p>Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool <code class="language-plaintext highlighter-rouge">pip</code> <sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>
+<p>Once all your packages are ready to be shipped, you can publish it in PyPI, which is repo of python packages used by the popular tool <code class="language-plaintext highlighter-rouge">pip</code> <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">2</a></sup>
 Run the following command to publish your package</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry build
@@ -258,21 +258,21 @@ Run the following command to publish your package</p>
 </code></pre></div></div>
 <p>This will create a system-wide availability of the command ‘demo-tool’ and can be run by simply executing <code class="language-plaintext highlighter-rouge">demo-tool</code> anywhere from the system.</p>
 
-<p>If you want to locally install it, create a virtual environment using <code class="language-plaintext highlighter-rouge">virtualenv venv</code> and activate it using <code class="language-plaintext highlighter-rouge">source /venv/bin/activate</code> and then run <code class="language-plaintext highlighter-rouge">pip install demo-tool</code>. This will be available locally only to this virtual environment.<sup id="fnref:1"><a href="#fn:1" class="footnote">3</a></sup></p>
+<p>If you want to locally install it, create a virtual environment using <code class="language-plaintext highlighter-rouge">virtualenv venv</code> and activate it using <code class="language-plaintext highlighter-rouge">source /venv/bin/activate</code> and then run <code class="language-plaintext highlighter-rouge">pip install demo-tool</code>. This will be available locally only to this virtual environment.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">3</a></sup></p>
 
 <hr />
 <h3 id="references">References:</h3>
 <hr />
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:3">
-      <p>https://python-poetry.org/ <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>https://python-poetry.org/ <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4">
-      <p>https://pypi.org/ <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:4" role="doc-endnote">
+      <p>https://pypi.org/ <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:1">
-      <p>https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>https://packaging.python.org/guides/distributing-packages-using-setuptools/#setup-args <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -306,6 +306,20 @@ Run the following command to publish your package</p>
       
         
           
+            
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2020/12/26/Deploying-python-app.html">Install Python modules to machine without internet</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
       
           
       
@@ -315,10 +329,15 @@ Run the following command to publish your package</p>
       
         
           
-            
-            <div class="panel-body">
-              <h4>Related Posts</h4>
-              <ul>
+      
+          
+      
+    
+  
+    
+      
+        
+          
             
                 <li class="relatedPost">
                   <a href="http://localhost:4000/python/ml/2020/03/14/Diffusion-Map.html">Diffusion Map for manifold learning, Theory and Implementation</a>
@@ -477,16 +496,6 @@ Run the following command to publish your package</p>
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2019/12/25/CNN.html">Convolutional Neural Network using PyTorch</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
       
           
       

@@ -172,7 +172,7 @@
 <hr />
 <p>‘Curse of dimensionality’ is a well-known problem in Data Science, which often causes poor performance, inaccurate results, and, most importantly, a similarity measure break-down. The primary cause of this is because high dimensional datasets are typically sparse, and often a lower-dimensional structure or ‘Manifold’ would embed this data. So there is a non-linear relationship among the variables (or features or dimensions), which we need to learn to compute better similarity.</p>
 
-<p>Manifold learning is an approach to non-linear dimensionality reduction. The basis for algorithms in manifold learning is that the dimensionality of many data sets is only artificially high <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. In this blog, we learn one of the many techniques in manifold learning called Diffusion Maps. The key idea is that Euclidean Distance, which is the most common measure of similarity, is meaningful only ‘locally.’ Therefore, assuming there is a lower-dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather than in the Euclidean space itself.</p>
+<p>Manifold learning is an approach to non-linear dimensionality reduction. The basis for algorithms in manifold learning is that the dimensionality of many data sets is only artificially high <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>. In this blog, we learn one of the many techniques in manifold learning called Diffusion Maps. The key idea is that Euclidean Distance, which is the most common measure of similarity, is meaningful only ‘locally.’ Therefore, assuming there is a lower-dimensional structure or manifold to the data, it would be appropriate to measure similarity over this structure rather than in the Euclidean space itself.</p>
 
 <p>Let us begin exploring with the following example of 2D datapoints neatly arranged in <strong>S</strong> shape.</p>
 
@@ -191,7 +191,7 @@
 <hr />
 <h3 id="what-is-the-takeaway">What is the takeaway?</h3>
 <hr />
-<p>This blog aims to introduce one of the manifold learning techniques called <strong>Diffusion Map</strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. This technique enables us to understand the underlying geometric structure of high dimensional dataset as well as to reduce the dimensions, if required, by neatly capturing the non-linear relationships between the original dimensions.</p>
+<p>This blog aims to introduce one of the manifold learning techniques called <strong>Diffusion Map</strong><sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>. This technique enables us to understand the underlying geometric structure of high dimensional dataset as well as to reduce the dimensions, if required, by neatly capturing the non-linear relationships between the original dimensions.</p>
 
 <hr />
 <h3 id="theory-behind-verybriefly">Theory behind (very briefly)</h3>
@@ -203,13 +203,13 @@
 
 <p>The connectivity between two data points, x, and y, is defined as the probability of jumping from x to y in one step of the random walk and is</p>
 
-<script type="math/tex; mode=display">connectivity(x, y) = p(x,y)</script>
+\[connectivity(x, y) = p(x,y)\]
 
 <p>However, it is useful to express the connectivity as a row-normalized likelihood function, K using Gaussian Kernel. This will be called <strong>diffusion kernel</strong></p>
 
-<script type="math/tex; mode=display">k(x,y) = \exp \left ( 
+\[k(x,y) = \exp \left ( 
 -\frac{\vert x-y \vert ^2}{\alpha}
-\right )</script>
+\right )\]
 
 <p>Now we define a row-normalized diffusion matrix, P.  Mathematically, this is equivalent to the transition matrix in the Markov chain. While P denotes the probability (or connectivity in this case) of single hopping from point x to point y, P² denotes the probability of reaching y from x in two hops and so on. As we increase the number of hops or Pᵗ for increasing values of t we observe that the diffusion process runs forward. Or in other words, the probability of following the geometric structure increases.</p>
 
@@ -251,13 +251,13 @@
 <h3 id="references">References:</h3>
 <hr />
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Manifold Learning methods in Scikit-Learn (https://scikit-learn.org/stable/modules/manifold.html) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Manifold Learning methods in Scikit-Learn (https://scikit-learn.org/stable/modules/manifold.html) <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>Porte, Herbst, Hereman, Walt, <em>An introduction to Diffusion Maps</em> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>Porte, Herbst, Hereman, Walt, <em>An introduction to Diffusion Maps</em> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -291,43 +291,62 @@
       
         
           
-      
-          
-      
-    
-  
-    
-      
-        
-          
-      
-          
-      
-    
-        
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
-      
-          
-      
-    
-  
-    
-      
-        
-          
             
             <div class="panel-body">
               <h4>Related Posts</h4>
               <ul>
+            
+                <li class="relatedPost">
+                  <a href="http://localhost:4000/python/2020/12/26/Deploying-python-app.html">Install Python modules to machine without internet</a>
+                  
+                    (Categories: <a href="/category/python">python</a>)
+                  
+                </li>
+          
+          
+        
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
+      
+          
+      
+    
+  
+    
+      
+        
+          
             
                 <li class="relatedPost">
                   <a href="http://localhost:4000/python/ml/2020/01/26/transfer-learning.html">Maximising accuracy with limited training data using Transfer Learning </a>
@@ -462,16 +481,6 @@
       
         
           
-            
-                <li class="relatedPost">
-                  <a href="http://localhost:4000/python/ml/2019/12/25/CNN.html">Convolutional Neural Network using PyTorch</a>
-                  
-                    (Categories: <a href="/category/python">python</a>, <a href="/category/ML">ML</a>)
-                  
-                </li>
-          
-          
-        
       
           
       
