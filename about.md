@@ -12,7 +12,7 @@ Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions
 
 **Contact**
 
-Best way to contact me is email. 
+Best way to contact author is email. 
 
 ---
 
