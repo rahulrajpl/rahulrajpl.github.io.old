@@ -6,7 +6,7 @@ layout: page
 
 Hey there,
 
-Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions/ etc. related to cybersecurity and machine learning (Or sometimes Computer Science in general). For one to one conversation with author, please use my public key [here](/static/base.txt).
+Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions/ etc. related to cybersecurity and machine learning (Or sometimes Computer Science in general). For one to one conversation with author, please use author's public key [here](/static/base.txt).
 
 ---
 
@@ -33,4 +33,4 @@ Author uses and advocates opensource. Design used [here](https://agusmakmun.gith
 - Google Analytics is enabled on this website, purely for learning.
 - All pictures available in this website are 'labelled for reuse'. 
 - Most pictures used for projects pages are representational. 
-- All efforts have been made to ensure references to original sources for every blog or project or otherwise. If something is still missing, please email me for inclusion.
+- All efforts have been made to ensure references to original sources for every blog or project or otherwise. If something is still missing, please email author for inclusion.
