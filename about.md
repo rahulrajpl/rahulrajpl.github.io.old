@@ -4,7 +4,7 @@ permalink: "/about/"
 layout: page
 ---
 
-Hey there,
+Hey,
 
 Welcome to randomwalk blog. Here you will get random thoughts/ studies/ opinions/ etc. related to cybersecurity and machine learning (Or sometimes Computer Science in general). For one to one conversation with author, please use author's public key [here](/static/base.txt).
 
